@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// Задача 1: генерация массива
+
+		// Введите размер квадратного массива;
+		var x=7;
+		// Введите диапазон для определения рандомного значения элементов массива;
+		var min=1,max=10;
+		// Создаем функцию создающую рандомное значение;
+		function random (min,max) {
+			var rand = min + Math.random() * (max + 1 - min);
+			rand = Math.floor(rand);
+			return rand;
+			}
+		// Создаем массив;
+		var arr = [];
+			for (var i = 0; i < x; i++) {
+				arr[i] = [];
+				for (var j = 0; j < x; j++) {
+					arr [i] [j] = random(1,10);
+				}
+			}
+		// Выводим наш массив;
+		console.log("\nСозданный массив arr:")
+		console.table(arr);
+		// Для решения последующих задач склонируем наш массив дабы не усложнять себе задачу при работе с методами которые будут менять исходный массив
+
+		// Задача 2: Отзеркаливание нашего массива;
+
+		// Создаем новый массив который будет содержать отзеркаленные элементы старого:
+		//  Для этого создадим двумерный массив (пустые массивы в массивах)
+		var rev = new Array(x)
+		for (var g = 0; g<x; g++) {
+			rev[g] = new Array(x)
+		}
+
+		// И зеркально присваем новому массиву элементы старого:
+
+		for (var s = 0; s <= arr.length-1;  s++){
+					for (var t = 0; t <= arr.length-1;  t++) {
+						rev[s][t] = arr[arr.length-s-1][arr.length-t-1]
+				}
+			}
+		console.log("\nЗеркальный массив rev:")
+		console.table(rev)
+		// Выводим массив
+
+
+		// Задача 3.a: Создать новый массив с элементами представляющими периметр старого массива arr
+
+		// Будем создавать массивы из кусков периметра миссива arr. для начала объявим их
+		var arr2=[]; // тут будут запушены элементы правой грани без первого и последнего элементов
+		var arr3=[]; // тут будут запушены элементы левой грани без первого и последнего элементов
+		var arr4 = []; // тут будут запушены элементы верхней грани
+		var arr5 = []; // тут будут запушены элементы нижней грани
+
+		// Запускаем всего один цикл с такими методами :
+		for (var z = 0;z<arr.length;z++) {
+			if (z>0&&z<arr.length-1) {
+				arr2.push(Number(arr[z].slice(arr.length-1)))
+				arr3.push(Number(arr[z].slice(0,1)))
+				}
+
+			else if (z==0) {
+					arr4 = arr[z]
+				}
+			else if (z==arr.length-1) {
+					arr5=arr[z].reverse()
+			}
+		}
+
+		console.log("\nПериметр по часовой стрелке:")
+		var arrt = (((arr4.concat(arr2)).concat(arr5)).concat(arr3.reverse()));
+		arr[x-1].reverse();
+		console.table(arrt);
+
+		// Задача 3.b: Создать новый массив с элементами представляющими периметр старого массива arr
+
+		// Будем создавать массивы из кусков периметра миссива arr. для начала объявим их
+		var arr2b=[]; // тут будут запушены элементы правой грани без первого и последнего элементов
+		var arr3b=[]; // тут будут запушены элементы левой грани без первого и последнего элементов
+		var arr4b = []; // тут будут запушены элементы верхней грани
+		var arr5b = []; // тут будут запушены элементы нижней грани
+
+		// Запускаем всего один цикл с такими методами :
+		for (var z = arr.length-1;z>=0;z--) {
+				arr2b.push(Number(arr[z].slice(arr.length-1)))
+				arr3b.push(Number(arr[arr.length-1-z].slice(0,1)))
+				if (z==0) {
+					arr4b = (arr[z].slice(1,arr.length-1)).reverse()
+				}
+				else if (z==arr.length-1) {
+					arr5b=arr[z].slice(1,arr.length-1)
+				}
+			}
+		var perimeter_b = (((arr2b.concat(arr4b)).concat(arr3b)).concat(arr5b))
+		console.log("\nПериметр против часовой стрелки:")
+		console.table(perimeter_b)
+		/*arr[x-1].reverse();*/
+
+		// Задача 3.с Диагонали
+
+		var arr2c=[]; // тут будут запушены элементы правой грани без первого и последнего элементов
+		var arr3c=[]; // тут будут запушены элементы левой грани без первого и последнего элементов
+		var arr4c = []; // тут будут запушены элементы верхней грани
+		var arr5c = []; // тут будут запушены элементы нижней грани
+		var diagon1 = [];
+		var diagon2 = [];
+		var diagon1_main = [];
+		var diagon2_main = [];
+		// Запускаем всего один цикл с такими методами :
+		for (var r = 0;r<x;r++) {
+				diagon1.push(Number(arr[arr.length-r-1].slice(arr.length-r-1,arr.length-r)));
+				diagon2.push(Number(arr[arr.length-r-1].slice(r,r+1)));
+				diagon1_main.push(Number(arr[r].slice(r,r+1)));
+				diagon2_main.push(Number(arr[r].slice(arr.length-r-1,arr.length-r)))
+
+			if (r==0) {
+					arr4c = arr[r]
+				}
+			else if (r==arr.length-1) {
+					arr5c=arr[r].reverse()
+			}
+		}
+		console.log("диагональ 1");
+		console.log(diagon1_main);
+		console.log("диагональ 2");
+		console.log(diagon2_main)
+		arr[x-1].reverse();
+		console.log("диагональ 3");
+		console.log(diagon2);
+		console.log("диагональ 4");
+		console.log(diagon1)
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM, обращение элемента</title>
+  <script>console.log(document.body)</script>
+</head>
+<body>
+
+  <div id="wrapper">Boom</div>
+  <div>
+    <input type="checkbox" name="checkbox">
+    <input type="text" name="text">
+    <input type="date" name="date">
+  </div>
+  <ul>
+    <li class="list"></li>
+    <li class="list"></li>
+    <li class="list"></li>
+    <li class="list"></li>
+  </ul>
+  <!--null - возращается из несуществующего узла к которому обращаются из селектора js  -->
+  <!--Так же Null - это объект который может быть прототипом не имея своих прототипов потому что в нем ничего нет -
+  прототип объекта Object как раз null а не undefined - так как только обьект може быть прототипом а undefined - не объект  -->
+  <!-- null - присваюют чему то программисты чтобы отличать от того что стало неопределенным в коде само  по себе -->
+  <!-- null применяется чтобы можно было отличить несущетсвующий объект в ДОМ от несуществующего обьекта в JS -->
+  <script type="text/javascript">
+  document.write("<h1>Hello</h1>");
+  console.log(document.getElementById('wrapper'));
+  // смотрим на узел как на объект JS
+  var a = document.getElementById('wrapper');
+  console.dir(a);
+  document.getElementById('wrapper').style.backgroundColor="#FF00AE";
+  var elements = document.getElementsByName('date');
+  console.log(elements[0]);
+  console.log(elements);
+  elements[0].style.border = "1px solid red";
+  var le = elements[1];
+  // console.log(le.previousElementSibling) //- не работает
+  // document.getElementsByTagName('form');
+  console.log(document.querySelectorAll('.list'))
+  </script>
+</body>
+</html>

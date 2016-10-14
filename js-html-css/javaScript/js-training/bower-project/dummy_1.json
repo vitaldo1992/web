@@ -1,0 +1,12 @@
+{
+  "phones": [
+    {
+      "model":"Apple",
+      "price":"20grn"
+    },
+    {
+      "model":"mizue",
+      "price":"30grn"
+    }
+  ]
+}

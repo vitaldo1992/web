@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vitaldo03">
+<head>
+	<meta charset="UTF-8">
+	<title>Аякс запросы и массивы</title>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app/angular.module.js"></script>
+	<script type="text/javascript" src="app/main.service.js"></script>
+	<script type="text/javascript" src="app/main.controller.js"></script>
+	<script type="text/javascript" src="app/footer.service.js"></script>
+	<script type="text/javascript" src="app/footer.controller.js"></script>
+</head>
+<body>
+
+	<main ng-controller="MainController">
+
+		<button ng-click="changeShow()">Show Main</button>
+
+		<div ng-show="show==true">
+			<ul>
+				<li ng-repeat="(key, value) in favotiteLoveStuffs | orderBy: 'name' | limitTo: 3:2">
+					<a href="">{{value.name}}</a>
+				</li>
+			</ul>
+
+			<div>Выберите Что-то</div>
+
+			<select ng-model="selectedItem" ng-options="option.id as option.name for option in favotiteLoveStuffs" >
+				<option value="" disabled="disabled">Выберите Что-то</option>
+			</select>
+		</div>
+
+	</main><br>
+
+	<footer ng-controller="FooterController">
+
+		<select id="sel" ng-model="selectedNumb" ng-options="option.numb as option.numb for option in sortNumb" ng-change="miv=0">
+			<option value="" disabled="disabled">Sort</option>
+		</select>
+
+		<button ng-show="selectedNumb" ng-click="miv = 0" ng-model="miv">1</button>
+		<button ng-show="selectedNumb && miv>0" ng-click="miv=miv-selectedNumb" ng-model="miv"> << </button>
+		<button ng-show="selectedNumb && miv>0" ng-model="miv">{{Math.floor(miv/selectedNumb+1)}}</button>
+		<button ng-show="selectedNumb && (!miv || miv/selectedNumb<myPeople.length/selectedNumb-1)" ng-click="miv = miv+selectedNumb;" ng-model="miv"> >> </button>
+		<button ng-show="selectedNumb && (Math.floor(miv/selectedNumb+1)) < (Math.floor(myPeople.length/selectedNumb)+1)" ng-click="miv = selectedNumb*Math.floor(myPeople.length/selectedNumb)" ng-model="miv">{{Math.floor(myPeople.length/selectedNumb)+1}}</button>
+
+		<table>
+			<tr>
+				<td>index</td>
+				<td>Name</td>
+				<td>id</td>
+				<td>balance</td>
+				<td>picture</td>
+			</tr>
+			<tr ng-repeat="(key, value) in myPeople | limitTo: selectedNumb: miv">
+				<td>{{value.index}}</td>
+				<td>{{value.name}}</td>
+				<td>{{value._id}}</td>
+				<td>{{value.balance}}</td>
+				<td><img ng-src="{{value.picture}}"></td>
+			</tr>
+		</table>
+
+	</footer>
+<!-- добавить чекбоксы, вынести условия в функции
+	повторить проход свойств объектов через option
+	сделать так чтобы кнопки не исчезали
+	ДЗ: аналоговый или электронные часы;
+ -->
+</body>
+</html>

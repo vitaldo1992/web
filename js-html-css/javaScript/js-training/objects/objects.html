@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+// 	var Georg = "Kum"
+// 	var x = {
+// 		"y" : "Vasya",
+// 		z: Georg,
+// }
+// 	console.log(x.y);
+// 	console.log(x)
+// 	Georg = "Fuck you";
+// 	console.log(x.z);
+// 	x[0] = 25;
+// 	x[1] = 30;
+// 	console.log(x[1])
+// 	for (i in x) {
+// 		console.log("это ключ "+x[i])
+// 	}
+
+// 	// Функция определяющая пустой ли объект
+// 	var Trumen = {
+// 		// Bog: 22
+// 	};
+// 	function find(obj) {
+// 		for (var pop in obj) {
+// 		}
+// 		if (pop == undefined) {
+// 			console.log("There are no properties");
+// 		}
+// 		else {
+// 			console.log("There are properties");
+// 		}
+// 	}
+// 	find(Trumen)
+
+		"use strict";
+
+		var salaries = {
+		  "Вася": 100,
+		  "Петя": 300,
+		  "Даша": 250,
+		  "Даша2": 450
+		};
+
+		/*function getSumm (obj) {
+			var z = 0;
+			for (var i in obj) {
+				z = z+obj[i];
+				console.log(obj[i])
+			}
+			return z;
+		}
+
+		console.log(getSumm(salaries))*/
+
+		function getMax (obj) {
+			// var z = [];
+			// for (var i in obj) {
+			// 	z.push(obj[i]);
+			// 	// console.log(obj[i])
+			// }
+			var max=0;
+			for (var i in obj) {
+				if (max<=obj[i]) {
+					max=obj[i];
+				}
+			}
+			return max;
+		}
+		console.log(getMax(salaries))
+
+		var time={
+			year: 2345,
+			day : 10,
+			hour: 11,
+			minute: 12,
+			second: 13,
+			microsecond: 123456,
+			comment: 5
+		}
+		console.log(time);
+		time.comment++;
+		// console.log(time.day);
+		console.log(time);
+		time.comment++;
+		console.log(time);
+		var aaaaaaaaaa=1000000000000,bbbbbbbbbbb=100000000,ccccccccc=2222220,ddddddddd=33333330,eeeeeeeeeee=44444444440,ffffffffff=50000000000,ggggggggggggg=0;
+		var arr = [aaaaaaaaaa,bbbbbbbbbbb,ccccccccc,ddddddddd,eeeeeeeeeee,ffffffffff,ggggggggggggg];
+		arr[6]++;
+		console.log(arr)
+
+// 		var time = {
+//   year: 2345,
+//   month: 11,
+//   day: 10,
+//   hour: 11,
+//   minute: 12,
+//   second: 13,
+//   microsecond: 123456
+// }
+
+// console.log(time); // (*)
+// time.microsecond++; // (**)
+
+// console.log(time);
+// time.microsecond++;
+
+// console.log(time);
+// time.microsecond++;
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fuck</title>
+</head>
+<body>
+	<script>
+		var x=5;
+		// Введите диапазон для определения рандомного значения элементов массива;
+		var min=1,max=10;
+		// Создаем функцию создающую рандомное значение;
+		function random (min,max) {
+			var rand = min + Math.random() * (max + 1 - min);
+			rand = Math.floor(rand);
+			return rand;
+			}
+		// Создаем массив;
+		var arr = [];
+			for (var i = 0; i < x; i++) {
+				arr[i] = [];
+				for (var j = 0; j < x; j++) {
+					arr [i] [j] = random(1,10);
+				}
+			}
+
+		/*var arr2 = [];
+			for (var z = 0; z < x; z++) {
+					arr2[z]=[];
+					for (var y = 0; y < x; y++) {
+					arr2[z][y] = arr[z][y];
+				}
+			}
+*/
+		// Выводим наш массив;
+		console.log("\nСозданный массив arr:")
+		console.table(arr);
+
+		/*console.log("\nКопированный массив arr:")
+		console.table(arr2);*/
+
+		var diagon1 = [];
+		for (var h=1;h<x-1;h++) {
+			diagon1.push(Number(arr[arr.length-1-h].slice(arr.length-1-h,arr.length-h)))
+		}
+		console.log(diagon1)
+
+		var diagon2 = [];
+		for (var s=0;s<x;s++) {
+			diagon2.push(Number(arr[arr.length-1-s].slice(s,s+1)))
+		}
+		console.log(diagon2)
+
+		console.log(arr[1].slice(3,4))
+		console.log(arr[2].slice(2,3))
+		console.log(arr[3].slice(3,2))
+	</script>
+</body>
+</html>

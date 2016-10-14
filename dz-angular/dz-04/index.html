@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<style type="text/css">
+		.active {
+			background-color: red;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<title>Pagination</title>
+
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app/app.model.js"></script>
+	<script type="text/javascript" src="app/footer.ctrl.js"></script>
+	<script type="text/javascript" src="app/footer.service.js"></script>
+
+</head>
+<body>
+<footer ng-controller="FooterController">
+
+<select ng-model="choosedNumb" ng-options="option.numb as option.numb for option in selectValue" ng-change="numBut()">
+
+</select>
+{{choosedNumb}}
+	<div style="width: 300px">
+		<button ng-model="$index"
+		ng-repeat="btn in arrBut track by $index" ng-click="increase($index)" ng-class="{active: index===$index}">{{$index+1}}</button>
+	</div>
+
+	<table>
+		<tr>
+			<td>Index</td>
+			<td>name</td>
+			<td>age</td>
+			<td>gender</td>
+			<td>picture</td>
+		</tr>
+		<tr ng-repeat="(key, value) in myPeople | limitTo:choosedNumb: untilNumb">
+			<td>{{value.index}}</td>
+			<td>{{value.name}}</td>
+			<td>{{value.age}}</td>
+			<td>{{value.gender}}</td>
+			<td><img ng-src="{{value.picture}}"></td>
+		</tr>
+	</table>
+
+</footer>
+</body>
+</html>

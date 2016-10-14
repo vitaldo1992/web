@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Функции</title>
+</head>
+<body>
+	<script>
+	/*var a = 1;
+	function getFunc() {
+		var a = 2;
+		var func = new Function("","console.log(a)");
+		return func;
+
+	}
+
+	getFunc()();*/
+
+	/*var x = {};
+	x.name = "Vitaldo";
+	x["name"+"_"]=x.name;
+	console.log(x.name_)
+	x.name = "Vitaldo34";
+	console.log(x.name_)*/
+
+	var obj={};
+
+
+	var Vitaldo = {};
+	Vitaldo.firstName = "Vitaliy";
+	Vitaldo.lastName = "Duvalko";
+	Vitaldo.age = 23;
+
+	var Fucker = {};
+	Fucker.firstName = "Fuck";
+	Fucker.lastName = "Fucked";
+	Fucker.age = 22;
+
+	var arr = [Vitaldo,Fucker];
+
+	for (i=0;i<arr.length;i++) {
+		obj[arr[i].firstName+"_"+arr[i].lastName] = arr[i];
+		console.log("LAstaName "+arr[i].lastName)
+	}
+
+	console.log(obj.Vitaliy_Duvalko);
+	// console.log(obj.Vitaliy_Duvalko.firstName+" age : "+obj.Vitaliy.age);
+	// console.log(obj.Fuck_Fucked.firstName+" age : "+obj.Fuck.age);
+
+	// console.log(obj.Vitaliy)
+
+
+	</script>
+</body>
+</html>

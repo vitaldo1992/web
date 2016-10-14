@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GetComputedStyle</title>
+</head>
+<body>
+
+  <div id="moska" style="background-color:red; width 100px; height: 50px">
+    <h1>Hello World</h1>
+  </div>
+  <button id = "knopka">Кнопка с текстом</button>
+<script>
+
+  // knopka.addEventListener("click",function() { showMe })
+  // showMe = function() {
+  //   this.style.display = ""
+  // }
+
+
+
+
+  var b = document.getElementById('moska')
+  console.log(getComputedStyle(b).backgroundColor);
+  var computedStyle = getComputedStyle(b).backgroundColor;
+  // getComputedStyle(b).backgroundColor = "rgb(255,187,0)"
+  // РАЗОБРАТЬСЯ ПОЧЕМУ НЕ РАБОТАЕТ
+</script>
+<script>
+  var h1 = document.getElementById('moska');
+  h1.onclick = function() {
+    alert('Fuck')
+  }
+  // Все события в нижнем регистре кроме DOMcontentLoaded
+  var h2 = document.getElementById('moska');
+  h1.onclick = function(event) { // event - задает браузер вместо нас
+    alert('Fuck')
+  }
+  // Проверить input - дз
+
+
+  var x = 0;
+  var knopka = document.getElementById("knopka");
+  knopka.onclick = function() {
+    console.log(this.style.display)
+    if (h1.style.display == "none") {
+      h1.style.display = "inline";
+    }
+    else {
+      h1.style.display = "none";
+    }
+    x++;
+    console.log(x);
+  } // Сделать с addEventListener
+
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angular02">
+<head>
+	<meta charset="UTF-8">
+	<title>angular02 : ng-hide, ng-show, ng-if, $scope.watch, $scope.watchGroup, $scope.WatchColellection, ng-src, ng-class, ng-style</title>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app/angular.module.js"></script>
+	<script type="text/javascript" src="app/footer/footer.controller.js"></script>
+	<script type="text/javascript" src="app/footer/footer.service.js"></script>
+	<script type="text/javascript" src="app/main/main.controller.js"></script>
+	<script type="text/javascript" src="app/main/main.service.js"></script>
+	<script type="text/javascript" src="app/header/header.controller.js"></script>
+	<script type="text/javascript" src="app/header/header.service.js"></script>
+	<style>
+		.redy {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<!--<p>В этом уроке мы рассмотрим связывания (различные bindings) и многие другие диррективы</p>-->
+	<heder ng-controller="HeaderController">
+		<h1 ng-show="fullName == adminName"
+		ng-if="fullName == adminName" ng-style="myStyle"
+		>Hello {{fullName}}</h1>
+		<p>Введи "Vitaldo" или "Helen"</p>
+		<input type="text" ng-model="fullName">
+		<h1 ng-show="fullName == customerName"
+		ng-if="fullName == customerName" ng-class="{ redy: fullName == customerName}"
+		>Hello {{fullName}}</h1>
+		<div></div>
+		<div></div>
+	</heder>
+
+	<main ng-controller="MainController">
+		<p>Тут начинаются приколы с $watchGroup</p>
+		<div>
+			Login
+			<input type="text" ng-model="AdmObj.name">
+			<div>Было {{newName}}</div>
+			<div>Стало {{oldName}}</div><br>
+		</div>
+		<div>
+			Password
+			<input type="text" ng-model="AdmObj.password">
+			<div>Было {{oldPassword}}</div>
+			<div>Стало {{newPassword}}</div><br>
+		</div>
+	</main>
+
+	<footer ng-controller="FooterController">
+		<h3>Тут начинаются приколы с $watchCollection</h3>
+		<button ng-click="showNewData()">click</button>
+		<p>Введите новые данные</p>
+		<div>Новое name админа</div>
+		<input type="text" ng-model="user.name">
+		<div>Новое имя: {{newName}}</div>
+		<div>Старое имя: {{oldName}}</div>
+		<br>
+		<div>Новое id админа</div>
+		<input type="text" ng-model="user.id">
+		<div>Новый ID: {{newID}}</div>
+		<div>Старый ID: {{oldID}}</div>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Регулярный выражения</title>
+</head>
+<body>
+	<script>
+		var color='#ffffff';
+		var reg = /#[a-fA-F0-9]{6}/;
+		console.log(reg.test(color));
+		color = '#ffYfff';
+		console.log(reg.test(color));
+		//cсимвол '#' не групируется;
+		//var reg = /\b#(([a-fA-F0-9]{6}/)|([0-9a-fA-F]{3}))\b//;
+		color = '#fff';
+		console.log(reg.test(color));
+	</script>
+</body>
+</html>

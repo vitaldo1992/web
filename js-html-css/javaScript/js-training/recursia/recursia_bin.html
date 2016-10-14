@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recurcia_bin</title>
+</head>
+<body>
+	<script>
+		var z = [],y = [],left = [],right=[];
+		var f = [];
+
+		var x = [[1,2,3,5,6],[4,5,6,9,10],[4,7,8,9,10],[5,11,12,13,14],[22,66,87,22,13]];
+		console.table(x);
+		function sumTo(n) {
+
+			  		if (x.length == 1) {
+			  			return n[0];
+			  		}
+			  		z = n.splice(0,1);
+			  		// y= n.splice(n.length-1,1);
+
+			  		function y (n) {
+			  				for (j=0;j<n[n.length-1].length-1];j++) {
+			  					left.unshift(n[j].splice())
+			  				}
+			  			// left = left.concat(n[i].splice(-1,1))
+			  			}
+			  			return left;
+			  		};
+
+			  		function left_side (n) {
+			  			for (i=0;i<n.length;i++) {
+			  			left = left.concat(n[i].splice(-1,1))
+			  			}
+			  			return left;
+			  		};
+
+			  		function right_side (n) {
+			  			for (i=0;i<n.length;i++) {
+			  			right = right.concat(n[n.length-i-1].splice(0,1))
+			  			}
+			  			return right;
+			  		};
+
+			  		f=f.concat(z.concat(left_side(n).concat(y.concat(right_side(n)))));
+			  		// for (i=0;i<n.length;i++) {
+			  		// 	left = left.concat(n[i].splice(-1,1))
+			  		// 	right = right.concat(n[n.length-i-1].splice(0,1))
+			  		// }
+					sumTo(n);
+				}
+
+		( sumTo(x) );
+		console.log("concat-top",f);
+		console.log("concat-bottom",y);
+		console.log("concat-left",left);
+		console.log("concat-right",right);
+		console.log("x",x);
+
+		/*var x = 2;
+		var g;
+		function changeX(n) {
+			g = 1;
+			x = x*n;
+
+		}
+		changeX(2);
+		console.log(x);
+		console.log(g)*/
+	</script>
+</body>
+</html>

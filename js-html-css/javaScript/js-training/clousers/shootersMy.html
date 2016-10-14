@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // var arr = [];
+  // var shooters = function() {
+  //   for (var i = 0; i<10 ; i++) {
+  //
+  //     var funk = function() {
+  //       console.log(this.prototype)
+  //     };
+  //     funk.prototype = []
+  //     // {
+  //     //   [i+"g"] : i
+  //     // };
+  //     funk.prototype.push(i)
+  //     arr[i] = funk;
+  //
+  //   }
+  //   console.log(funk.prototype)
+  // }
+  // shooters();
+  // arr[2]();
+  var arr = [];
+  var funk = function() {
+
+    for (var i=0;i<10;i++) {
+
+        arr[i] = function() {
+          console.log(+this)
+        }.bind(i);
+
+    }
+
+  }
+
+  funk();
+  arr[6]()
+
+
+  </script>
+</body>
+</html>

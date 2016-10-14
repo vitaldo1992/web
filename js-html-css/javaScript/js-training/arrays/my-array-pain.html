@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var f=3;
+  // Введите диапазон для определения рандомного значения элементов массива;
+  var min=1,max=10;
+  // Создаем функцию создающую рандомное значение;
+  function random (min,max) {
+   var rand = min + Math.random() * (max + 1 - min);
+   rand = Math.floor(rand);
+   return rand;
+   }
+  // Создаем массив;
+
+  var x = [];
+   for (var i = 0; i < f; i++) {
+    x[i] = [];
+    for (var j = 0; j < f; j++) {
+     x [i] [j] = random(1,10);
+    }
+   }
+
+  var xCopy = x.slice(0);// создаем копию - ИМЕННО ОНА МЕНЯ ШОКИРУЕТ ТЕМ ЧТО ИЗМЕНИТСЯ ПОСЛЕ ИЗМЕНЕНИЯ ОРИГИНАЛЬНОГО МАССИВА
+   console.log("\nx = ");
+   console.table(x);
+
+  var x2 = [];// ИМЕННО ЭТОТ МЕТОД С РЕВЕРСОМ МАССИВА И ДЕЛАЕТ ЭТО ПРОКЛЯТОЕ ВОЛШЕБСТВО - ТОЕСТЬ МЕНЯЕТ И КЛОН И ОРИГИНАЛ
+  for (var s = x.length-1; s >= 0;  s--){
+    x2.push(x[s].reverse())
+   }
+
+  console.log("\nx = ");
+  console.table(x);
+  console.log("\nx2 = ");
+  console.table(x2);
+  console.log("\nxCopy = ");//ВУАЛЯ!!!
+  console.table(xCopy); // Я НИЧЕГО НЕ ДЕЛАЛ С ЭТИМ МАСИВОМ - КАКОГО ХЕРА???)))
+
+	</script>
+</body>
+</html>

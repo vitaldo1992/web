@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// a>b>c>d d>c>b>a
+		// (a>b && b>c && c>d)
+		// (d>c && c>b && b>a)
+
+		// b>c>d>a a>d>c>b
+		// (b>c && c>d && d>a)
+		// (a>d && d>c && c>b)
+
+		// c>d>a>b b>a>d>c
+		// (c>d && d>a && a>b)
+		// (b>a && a>d && d>c)
+
+		// d>a>b>c c>b>a>d
+		// (d>a && a>b && b>c)
+		// (c>b && b>a && a>d)
+
+		var a = 10; var a2 = a;
+		var b = 3; var b2 = b;
+		var c = 40; var c2 = c;
+		var d = 20; var d2 = d;
+
+// 1
+		if (a>b && b>c && c>d) {
+			a *= 20;
+			b *= 10;
+			c *= 5;
+			console.log(" a = "+a2+" * 20 = "+a)
+			console.log(" b = "+b2+" * 10 = "+b)
+			console.log(" c = "+c2+" * 5 = "+c)
+			console.log(" d = "+d2)
+		}
+// 2
+		else if (d>c && c>b && b>a) {
+			d *= 20;
+			c *= 10;
+			b *= 5;
+			console.log(" d = "+d2+" * 20 = "+d)
+			console.log(" c = "+c2+" * 10 = "+c)
+			console.log(" b = "+b2+" * 5 = "+b)
+			console.log(" a = "+a2)
+		}
+// 3
+		else if (b>c && c>d && d>a) {
+			b *= 20;
+			c *= 10;
+			d *= 5;
+			console.log(" b = "+b2+" * 20 = "+b)
+			console.log(" c = "+c2+" * 10 = "+c)
+			console.log(" d = "+d2+" * 5 = "+d)
+			console.log(" a = "+a2)
+		}
+// 4
+		else if (a>d && d>c && c>b) {
+			a *= 20;
+			d *= 10;
+			c *= 5;
+			console.log(" a = "+a2+" * 20 = "+a)
+			console.log(" d = "+d2+" * 10 = "+d)
+			console.log(" c = "+c2+" * 5 = "+c)
+			console.log(" b = "+b2)
+		}
+// 5
+		else if (c>d && d>a && a>b) {
+			c *= 20;
+			d *= 10;
+			a *= 5;
+			console.log(" c = "+c2+" * 20 = "+c)
+			console.log(" d = "+d2+" * 10 = "+d)
+			console.log(" a = "+a2+" * 5 = "+a)
+			console.log(" b = "+b2)
+		}
+// 6
+		else if (b>a && a>d && d>c) {
+			b *= 20;
+			a *= 10;
+			d *= 5;
+			console.log(" b = "+b2+" * 20 = "+b)
+			console.log(" a = "+a2+" * 10 = "+a)
+			console.log(" d = "+d2+" * 5 = "+d)
+			console.log(" c = "+c2)
+		}
+// 7
+		else if (c>b && b>a && a>d) {
+			c *= 20;
+			b *= 10;
+			a *= 5;
+			console.log(" c = "+c2+" * 20 = "+c)
+			console.log(" b = "+b2+" * 10 = "+b)
+			console.log(" a = "+a2+" * 5 = "+a)
+			console.log(" d = "+d2)
+		}
+// 8
+		else if (d>a && a>b && b>c) {
+			d *= 20;
+			a *= 10;
+			b *= 5;
+			console.log(" d = "+d2+" * 20 = "+d)
+			console.log(" a = "+a2+" * 10 = "+a)
+			console.log(" b = "+b2+" * 5 = "+b)
+			console.log(" c = "+c2)
+		}
+	</script>
+</body>
+</html>

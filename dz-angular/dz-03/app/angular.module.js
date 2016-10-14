@@ -1,0 +1,1 @@
+var vitaldo03 = angular.module("vitaldo03", []);

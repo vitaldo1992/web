@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hourses - right</title>
+</head>
+<body>
+  <script>
+  function Hourse(name,mileage) {
+    var tired=0;
+    var Tired;
+    var showTired = function() {
+      console.log(tired++);
+      if (tired!=0 && (tired%10==0)) {
+        clearInterval(Tired);
+        Tired = setInterval(showTired,5000);
+      }
+      else if (tired%10==1) {
+          clearInterval(Tired);
+          Tired = setInterval(showTired,1000);
+        }
+      else if (tired==mileage+1) {
+        clearInterval(Tired);
+      }
+      // else {
+      //   Tired = setInterval(showTired,1500);
+      // }
+    };
+    this.Run = function() {
+      Tired = setInterval(showTired,1000)
+    };
+  }
+
+  var h1 = new Hourse("Lera",25);
+  h1.Run();
+
+  // function me() {
+  //   console.log(b-=2);
+  //   if (b<36) {
+  //     clearInterval(krew);
+  //   }
+  // }
+  // var b = 40;
+  // var krew = setInterval(me,1000);
+  var NameCtrl = function() {
+    alert("Hello World");
+  };
+  NameCtrl();
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+.storng-red {
+    font-weight: bolder;
+    margin-top: 200px;
+    color: rgb(171, 232, 190);
+/*    text-align: right;*/
+    text-align: justify;
+    text-decoration: underline;
+/*    text-transform: capitalize;*/
+/*    text-transform: uppercase;*/
+    text-indent: 40px; /*отступ 30 пикселей*/
+/*    letter-spacing: 5px; расстояние между буквами*/
+    word-spacing: 10px; /*Расстояние между словами*/
+    line-height: 30px;/*Высота линии*/
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-variant: small-caps;
+}

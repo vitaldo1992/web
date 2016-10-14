@@ -1,0 +1,114 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+.styles {
+    color: red;
+    font-family: "Roboto", sans-serif;
+    list-style-type: circle;
+    list-style-type: square;
+    list-style-type: none; /*убирает точки совсем*/
+    list-style-type: decimal; /*нумерацияы*/
+    list-style-type: lower-roman;
+    list-style-type: lower-alpha;
+    list-style-type: upper-alpha;
+    list-style-type: upper-roman;
+    list-style-image: url(../images/vk.png);
+    list-style-position: outside;
+    list-style-position: inside;
+    list-style: circle url(../images/vk.png) inside;
+    padding: 5px;
+    border: 1px solid black;
+    
+} 
+
+.styles:hover {
+    background-color: #f8af88;
+}
+
+
+#nazy {
+    height:80px;
+}
+
+.min {
+    float: left;
+    position: relative;
+    
+ 
+}
+
+.min a {
+    font-family: 'Roboto';
+    text-decoration: none;
+    line-height: 65px;
+    display: block;
+    padding: 0 15px;
+    height: 65px;
+    background-color: pink;
+}
+
+.min a:hover {
+    background-color: red;
+    color: white;
+    
+}
+
+#min .dropdown {
+    width: 150px;
+    position: absolute;
+    top: 100%;
+    background: blue;
+}
+
+#min .dropdown li {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    background: blue;
+}

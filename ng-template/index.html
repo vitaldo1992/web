@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>myApp</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app/angular.module.js"></script>
+	<script type="text/javascript" src="app/header/header.ctrl.js"></script>
+	<script type="text/javascript" src="app/header/header.service.js"></script>
+</head>
+<body>
+	<header ng-controller="HeaderController">
+		<h2>{{name}}</h2>
+	</header>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>prototype</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+
+  function apartments(name, height, width, deepness) {
+    this.name = name;
+    this.height = height;
+    this.width = width;
+    this.deepness = deepness;
+    // this.density = 400;
+    // this.__proto__.constructor = apartments;
+    this.weight = function() {
+      // this.constructor.prototype = this;
+      console.log(this.__proto__)
+
+      this.__proto__.totalWeight += Math.round(this.height*this.width*this.deepness*this.density);
+      return Math.round(this.height*this.width*this.deepness*this.density);
+
+    }
+  }
+  console.log("прототип",apartments.prototype)
+
+  apartments.prototype = {
+    density: 400,
+    totalWeight: 0,
+    constructor: apartments
+  };
+
+  var chair = new apartments("chair",0.5,0.3,0.3);
+  console.log(chair.weight());
+  console.log("конструктор",chair.constructor)
+  var table = new chair.constructor("table",0.5,0.5,0.5);
+  // console.log(table);
+  console.log(table.weight());
+
+
+
+  </script>
+
+  <div ng-app><script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <div><input type="text" id="name" ng-model="name"></input></div>
+    <div ng-init='books=[
+      {"title": "Книга жизни", "year": 2006},
+      {"title": "Книга бытия", "year": 2015},
+      {"title": "Книга любви", "year": 2016},
+      {"title": "Книга смерти", "year": 1992},
+      {"title": "Книга - приключения спанч-боба", "year": 1990}
+    ]'></div>
+    <p>Fuck {{name}}</p>
+    <table style="border-collapse:collapse">
+      <tr>
+        <th style="border: 1px solid black; padding 5px">Книга</th><th style="border: 1px solid black; padding 5px">Год издания</th>
+      </tr>
+      <tr ng-repeat="book in books | filter: name"  style="border-collapse:collapse; border: 1px solid black">
+        <td style="border: 1px solid black; padding 5px">{{book.title}}</td><td style="border: 1px solid black; padding 5px">{{book.year}}</td>
+      </tr>
+    </table>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+.table-dymohody table{
+	border-collapse:collapse;
+}
+.table-dymohody td {
+	border: 1px solid #36B5E0;
+	color:inherit;
+	border-collapse:collapse;
+	text-align:center;
+	font-size: 14px;
+	font-family: "Metro", Tahoma, Arial, Verdana, sans-serif;
+	margin:0 3px;
+	padding: 0px;
+}
+
+.table-dymohody tr>td {
+	width: 45px;
+}
+
+.table-dymohody tr {
+	color:blue;
+}
+
+
+.table-dymohody tr:visited {color:gray}
+.table-dymohody tr:hover {color:white; background-color: #0088B5 }
+.table-dymohody tr:active {color:#0000FF; }
+
+
+.table-dymohody th {
+	border-collapse:collapse;
+	text-align:center;
+	font-size: 11px;
+	font-family: "Metro", Tahoma, Arial, Verdana, sans-serif;
+	font-weight: normal;
+	padding: 0px;
+	height:25px;
+}
+
+.table-dymohody  tr:nth-child(1) {
+	background-color: #02537D;
+	color:white;
+	border: 1px solid white;
+}
+
+.table-dymohody  tr:nth-child(2) {
+	background-color: #36B5E0;
+	color:white;
+	border-color: white;
+}
+
+.table-dymohody  a {
+	width:100%;
+	display:block; height:100%;
+	text-decoration: none;
+	color: inherit;
+}
+
+.table-dymohody td:nth-child(1) {
+	font-size: 11px;
+}

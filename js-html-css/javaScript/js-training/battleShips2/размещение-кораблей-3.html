@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Размещение кораблей3</title>
+</head>
+<body>
+  <script>
+  var arr = new Array(10);
+  (function makeArray() {
+    for (var i = 0; i<10; i++) {
+      arr[i] = new Array(10);
+      for (var j = 0; j<10;j++) {
+        arr[i][j] = 0;
+      }
+    }
+    // console.table(arr)
+  })();
+
+
+  function makeFuckingChip() {
+    var x;
+    var y;
+    var direction;
+    (function makeCroodsChip() {
+
+      (function MakeDirection() {
+        direction = Math.round(Math.random());
+        console.log(direction);
+      })();
+
+      x = Math.round(Math.random()*9);
+      y = Math.round(Math.random()*9);
+      // y = 8;
+      console.log(x,y)
+      var checkChip = 1;
+      var checkField = "xx";
+      var thereIsNothing = undefined;
+      (function check_Croods_Function() {
+
+        if (arr[x][y]=="xx") {
+          makeCroodsChip();
+        };
+
+        switch(checkChip) {
+          case arr[x][y]: makeCroodsChip(); break;
+          case arr[x][y-1]: makeCroodsChip(); break;
+          case arr[x][y+1]: makeCroodsChip(); break;
+        };
+
+        if (arr[x+1]) {
+          switch(checkChip) {
+            case arr[x+1][y]: makeCroodsChip(); break;
+            case arr[x+1][y-1]: makeCroodsChip(); break;
+            case arr[x+1][y+1]: makeCroodsChip(); break;
+          };
+        };
+
+        if (arr[x-1]) {
+          switch(checkChip) {
+            case arr[x-1][y]: makeCroodsChip(); break;
+            case arr[x-1][y-1]: makeCroodsChip(); break;
+            case arr[x-1][y+1]: makeCroodsChip(); break;
+          };
+        }
+        // direction = 1;
+        if (direction==0) {
+          console.log("Vertical because of 0");
+          if (arr[x+2]) {
+            switch(checkChip) {
+              case arr[x+2][y]: makeCroodsChip(); console.log(x+2,y,"[x+2][y]"); break;
+              case arr[x+2][y-1]: makeCroodsChip(); console.log(x+2,y-1,"[x+2][y-1]"); break;
+              case arr[x+2][y+1]: makeCroodsChip(); console.log(x+2,y+1,"[x+2][y+1]"); break;
+            };
+          };
+
+          if (arr[x+3]) {
+            switch(checkChip) {
+              case arr[x+3][y]: makeCroodsChip(); console.log(x+3,y,"[x+3][y]"); break;
+              case arr[x+3][y-1]: makeCroodsChip(); console.log(x+3,y-1,"[x+3][y-1]"); break;
+              case arr[x+3][y+1]: makeCroodsChip(); console.log(x+3,y+1,"[x+3][y+1]"); break;
+            };
+          };
+
+          if (arr[x+4]) {
+            switch(checkChip) {
+              case arr[x+4][y]: makeCroodsChip(); break;
+              case arr[x+4][y-1]: makeCroodsChip(); break;
+              case arr[x+4][y+1]: makeCroodsChip(); break;
+            };
+          }
+          if (arr[x+2]) {
+            switch(checkField) {
+              case arr[x+2][y]: makeCroodsChip(); break;
+            }
+          };
+          if (arr[x+3]) {
+            switch(checkField) {
+              case arr[x+3][y]: makeCroodsChip(); break;
+            }
+          };
+          if (arr[x+4]) {
+            switch(checkField) {
+              case arr[x+4][y]: makeCroodsChip(); break;
+            }
+          };
+
+          switch(thereIsNothing) {
+            case arr[x]: makeCroodsChip(); break;
+            case arr[x+1]: makeCroodsChip(); break;
+            case arr[x+2]: makeCroodsChip(); break;
+            case arr[x+3]: makeCroodsChip(); break;
+          }
+
+
+        };
+        if (direction==1){
+          console.log(y+4>10);
+          console.log("Gorizontal because of 1");
+
+          // if (direction==1) {
+          //   makeCroodsChip();
+          // }
+
+          if (y+2>9 || y+1>9 || y+3>9) {
+            // arr[x][y]==undefined&&arr[x][y+1]==undefined&&arr[x][y+2]==undefined&&arr[x][y+3]==undefined
+            console.log("make again")
+            makeCroodsChip();
+            // check_Croods_Function();
+          };
+
+          if(arr[x][y-1]==1 || arr[x][y]==1 || arr[x][y+1]==1 ||arr[x][y+2]==1 ||arr[x][y+3]==1 || arr[x][y+4]==1) {
+            makeCroodsChip();
+          };
+
+          if(arr[x][y]=="xx"|| arr[x][y+1]=="xx"||arr[x][y+2]=="xx"||arr[x][y+3]=="xx"||arr[x][y+4]=="xx") {
+            makeCroodsChip();
+          };
+          if (arr[x+1]!==undefined){
+            if(arr[x+1][y-1]==1||arr[x+1][y]==1||arr[x+1][y+1]==1||arr[x+1][y+2]==1||arr[x+1][y+2]==1||arr[x+1][y+3]==1||arr[x+1][y+4]==1) {
+              makeCroodsChip();
+            };
+          }
+          if(arr[x-1]!==undefined) {
+            if(arr[x-1][y-1]==1||arr[x-1][y]==1||arr[x-1][y+1]==1||arr[x-1][y+2]==1||arr[x-1][y+2]==1||arr[x-1][y+3]==1||arr[x+1][y-4]==1) {
+              makeCroodsChip();
+            };
+          }
+
+          if (arr[x][y+2]==checkChip||arr[x][y+3]==checkChip||arr[x][y+4]==checkChip) {
+            makeCroodsChip();
+          };
+          if (arr[x][y+2]==checkField||arr[x][y+3]==checkField||arr[x][y+4]==checkField) {
+            makeCroodsChip();
+          };
+          if (arr[x+1]) {
+            if (arr[x+1][y+2]==checkChip||arr[x+1][y+3]==checkChip||arr[x+1][y+4]==checkChip) {
+              makeCroodsChip();
+            };
+          }
+          if (arr[x-1]) {
+            if (arr[x-1][y+2]==checkChip||arr[x-1][y+3]==checkChip||arr[x-1][y+4]==checkChip) {
+              makeCroodsChip();
+            };
+          };
+        };
+      })();
+
+      console.log(direction);
+    })();
+
+    if (direction==0) {
+      make4chipVert();
+    }
+    else if (direction==1){
+      make4chipGor();
+    }
+    function make4chipVert() {
+      for (var i = 0; i<4; i++) {
+        arr[x+i][y]=1;
+        console.log(x+i);
+        arr[x+i][y-1]="xx";
+        console.log(x+i);
+        arr[x+i][y+1]="xx";
+        console.log(x+i);
+      };
+      if (arr[x+4]) {
+        arr[x+4][y-1]="xx";
+        arr[x+4][y]="xx";
+        arr[x+4][y+1]="xx";
+      };
+      if (arr[x-1]) {
+        arr[x-1][y-1]="xx";
+        arr[x-1][y]="xx";
+        arr[x-1][y+1]="xx";
+      }
+      console.table(arr)
+    };
+
+    function make4chipGor() {
+      arr[x][y+4]="xx";
+      arr[x][y-1]="xx";
+      for (var i = 0; i<4; i++) {
+        arr[x][y+i]=1;
+        if (arr[x+1]){
+          arr[x+1][y+i]="xx";
+          arr[x+1][y-1]="xx";
+          arr[x+1][y+4]="xx";
+        };
+        if (arr[x-1]) {
+          arr[x-1][y+i]="xx";
+          arr[x-1][y-1]="xx";
+          arr[x-1][y+4]="xx";
+        }
+      };
+      console.table(arr)
+    };
+  };
+
+
+
+
+  makeFuckingChip();
+  makeFuckingChip();
+
+  var arrNew = new Array(10);
+
+  for (var i = 0; i<10; i++) {
+    arrNew[i] = new Array(10);
+    for (var j = 0; j<10;j++) {
+      arrNew[i][j] = arr[i][j];
+    }
+  }
+
+
+  console.table(arrNew)
+
+  </script>
+</body>
+</html>

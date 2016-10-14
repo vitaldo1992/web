@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <script type="text/javascript" src="js/angular.js" async></script> -->
+	<!-- <script type="text/javascript" src="js/app.js" defer></script> -->
+	<script type="text/javascript" src="js/user.js"></script>
+</head>
+<body>
+	<!-- были слешы (/ ../01/03 ./01/t) -->
+	<p>Условный комментарий для только IE</p>
+	<!--[if IE 7]>
+	<style type="text/css">
+		<-->
+		<script>
+			console.log(zeta)
+		</script>
+		<!--<script>
+			console.log(zeta*2)
+		</script>-->
+		<p> еще </p>
+		<!-- ctr+/ = комментарий -->
+		<p>EcmaScript 20.15 (или 6) - выпущеная версия и еще EcmaScript 7 - почитать</p>
+		<p>мы работаем в EcmaScript3 (по дэфолту)</p>
+		<div><script>
+			'use strict'
+		</script>
+		<script>
+			"use strict";
+			var x=function() {
+				'use strict'
+			};
+
+			// var a1 = 0;
+			// console.log(a1);
+			// console.info(a1);
+			// console.error(a1);
+			// console.warn(a1);
+			// var 1a = 3;
+			var thisIsToolLongVarriable = "Lower Camel case - для переменных";
+			var ThisIsToolLongVarriable = "Upper Camel case - для конструкторов и др функций";
+			var this_Is_ToolLong_Varriable = "Snap Camel case";
+			document.write(" "+thisIsToolLongVarriable+"<br> "+ThisIsToolLongVarriable+"<br>this_Is_ToolLong_Varriable");
+			// узнать что это снизу
+			debugger;
+			var a = 123;
+			var b, c;
+			var b = c = 12345;
+			// console.log(b+c);
+			// var d;
+			igor = 3;
+			console.log(igor);
+			// - разобратся почему не высвечивает ошибку
+			// var GOBLIN_RY = "#F00"  - псевдоконстанта (Upper Snap Case)
+			console.log(1/0+" Даст бесконечностьи")
+			isNaN(a1);
+			console.log("привет я \"строка\"")
+			var g = true;
+			console.log(typeof g);
+			var t = null;
+			typeof t;
+			var user = {
+				'1name': "Sasha",
+				'surname': "Dio",
+				age: 22,
+				student: true
+			}
+			//чтобы получить 1name можно только так user["1name"] - проверь
+			//проверяю!!!
+			console.log(user["1name"])
+			var array = [10, "Name", true, null, {neron: 4}]
+			console.log(typeof array[4]["neron"])
+		</script>
+	</div>
+</body>
+</html>

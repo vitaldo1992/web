@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Размещение кораблей</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var arr = new Array(10);
+  for (var i=0;i<10;i++) {
+    arr[i] = new Array(10)
+    for (var j=0; j<10; j++) {
+      arr[i][j]=0;
+    }
+  }
+  console.table(arr);
+
+
+  function makeChips() {
+    var x = Math.round(Math.random()*10);
+    var y = Math.round(Math.random()*10);
+
+    if ((y+1)<10&&(y-1)>=0&&(x+1)<10&&(x-1)>=0&&arr[x][y]!=1&&arr[x][y]!="xx" &&
+        arr[x+1][y-2]!=1&&arr[x+1][y-1]!=1&&arr[x+1][y]!=1&&arr[x+1][y+1]!=1&&arr[x+1][y+2]!=1 &&
+        arr[x][y-2]!=1&&arr[x][y-1]!=1&&arr[x][y+1]!=1&&arr[x][y+2]!=1 &&
+        arr[x-1][y-2]!=1&&arr[x-1][y-1]!=1&&arr[x-1][y]!=1&&arr[x-1][y+1]!=1&&arr[x-1][y+2]!=1 ) {
+
+
+      // if (arr[x+1][y-2]!=1&&arr[x+1][y-1]!=1&&arr[x+1][y]!=1&&arr[x+1][y+1]!=1&&arr[x+1][y+2]!=1) {
+      //   if (arr[x][y-2]!=1&&arr[x][y-1]!=1&&arr[x][y+1]!=1&&arr[x][y+2]!=1) {
+      //     if (arr[x-1][y-2]!=1&&arr[x-1][y-1]!=1&&arr[x-1][y]!=1&&arr[x-1][y+1]!=1&&arr[x-1][y+2]!=1) {
+
+            console.log(x);
+            console.log(y);
+
+            if (arr[x][y]!=1&&arr[x][y]!="xx"&&arr[x][y+1]!=1&&arr[x][y+1]!="xx"&&arr[x][y-1]!=1&&arr[x][y-1]!="xx") {
+              arr[x][y] = 1;
+              arr[x][y+1] = 1;
+              arr[x][y-1] = 1;
+            }
+            else {console.log("Вероятно на клетке где ставится корабль уже есть корабль либо забитая клетка");makeChips()};
+            if (arr[x+1]) {
+              makeXXdown()
+            };
+            if (arr[x-1]) {
+              makeXXup()
+            };
+
+            makeXX(x,y+2);
+            makeXX(x,y-2);
+            makeXX(x+1,y+2);
+            makeXX(x+1,y-2);
+            makeXX(x-1,y+2);
+            makeXX(x-1,y-2);
+
+            console.table(arr);
+          }
+          else {
+            console.log("Вероятно - Выходит за рамки");makeChips()
+          };
+    //     } else {makeChips()}
+    //   } else {makeChips()}
+    // } else {makeChips()}
+
+    function makeXXdown() {
+      if (arr[x+1][y]!=1&&arr[x+1][y+1]!=1&&arr[x+1][y-1]!=1) {
+        arr[x+1][y] = "xx";
+        arr[x+1][y+1] = "xx";
+        arr[x+1][y-1] = "xx";
+      }
+      else {
+        console.log("makeXXdown - вероятно внизу уже есть корабль");
+        makeChips()
+      }
+    };
+    function makeXXup() {
+      if (arr[x-1][y]!=1&&arr[x-1][y+1]!=1&&arr[x-1][y-1]!=1) {
+        arr[x-1][y] = "xx";
+        arr[x-1][y+1] = "xx";
+        arr[x-1][y-1] = "xx";
+      }
+      else {
+        sonsole.table(arr);
+        console.log("makeXXup - вероятно вверху уже есть корабль");
+        makeChips()}
+      };
+      function makeXX(x,y) {
+        if (arr[x][y]!=1) {
+          if (arr[x][y]!=undefined) {
+            arr[x][y] = "xx";
+          }
+        }
+        else {
+
+          console.log("makeXX - вероятно на одной из клеток уже есть корабль или забитая клетка");makeChips()}
+        };
+
+      }
+      makeChips();
+
+      function makeChipsVertical() {
+        var x = Math.round(Math.random()*10);
+        var y = Math.round(Math.random()*10);
+        if ( (arr[x+2]) && (arr[x-2]) && ((y+1)<10) && ((y-1)>=0) && ((x+1)<10) && ((x-1)>=0) && (arr[x][y]!=1) &&
+            (arr[x][y]!="xx") && (arr[x+2][y]!=1) && (arr[x+1][y]!=1) && (arr[x-1][y]!=1) && (arr[x-2][y]!=1) &&
+            (arr[x+2][y+1]!=1) && (arr[x+1][y+1]!=1) && (arr[x][y+1]!=1) && (arr[x-1][y+1]!=1) && (arr[x-2][y+1]!=1) &&
+            (arr[x+2][y-1]!=1) && (arr[x+1][y-1]!=1) && (arr[x][y-1]!=1) && (arr[x-1][y-1]!=1) && (arr[x-2][y-1]!=1)) {
+
+
+                  console.log(x);
+                  console.log(y);
+                  if (arr[x][y]!=1&&arr[x][y]!="xx"&&arr[x+1][y]!=1&&arr[x+1][y]!="xx"&&arr[x-1][y]!=1&&arr[x-1][y]!="xx") {
+                    arr[x][y] = 1;
+                    arr[x+1][y] = 1;
+                    arr[x-1][y] = 1;
+                    console.table(arr)
+                  }
+                  else {makeChipsVertical()}
+                }
+                else {makeChipsVertical()}
+              }
+
+      makeChipsVertical()
+      // Дома - записать.
+      // 3(4) принципа ООП:
+      // 1.наследование
+      // 2.инкапсуляция ( через var, let)
+      // 3.полиморфизм (возможность переопределить унаследованый метод (свойство))
+      // 4.абстракция - (писатть наиболее широконаследованый класс как можно обширнее)
+      </script>
+    </body>
+    </html>

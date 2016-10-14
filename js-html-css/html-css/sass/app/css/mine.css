@@ -1,0 +1,20 @@
+p {
+  font-size: 20px;
+  color: blue; }
+
+p {
+  height: 120px; }
+
+p {
+  background-color: green;
+  color: yellow; }
+
+a {
+  color: gray;
+  margin: 10px 30px;
+  padding: 10px 30px; }
+  a:hover {
+    color: yellow; }
+
+body {
+  background-color: white; }

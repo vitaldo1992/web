@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function -as an object</title>
+</head>
+<body>
+	<script>
+		var f = function() {
+			console.log("b");
+			console.log(this)
+		}
+		f.sayHi = "Hi!";
+		console.log(f.sayHi);
+		var g = f;
+		f.sayHi = "Fuck you";
+		
+		console.log(g.sayHi);
+		f();
+	</script>
+</body>
+</html>

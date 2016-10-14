@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>rightBattle</title>
+</head>
+<body>
+    <script>
+
+      function makeBattle() {
+
+        arr = new Array(10);
+        for (var i = -5;i<15;i++) {
+          arr[i] = new Array(10);
+          for (var j=0;j<10;j++) {
+            arr[i][j] = 0;
+          }
+        }
+
+
+        var TheNumber = 0;
+            var makeChips = function(number) {
+              // debugger;
+              // console.log(number+" the own number");
+              TheNumber=TheNumber+number;
+              // console.log(TheNumber+" the Summary number up to loop");
+              var x = Math.round(Math.random()*9);
+              var y = Math.round(Math.random()*9);
+              var choozedDirection = Math.round(Math.random());
+              for (var i=0; i<number; i++) {
+                if (choozedDirection == 0  ) {
+                    arr[x][y+i] = 1;
+                    arr[x][y-1]="x";
+                    arr[x][y+number] = "x";
+                    arr[x+1][y+i] = "x";
+                    arr[x+1][y-1] = "x";
+                    arr[x+1][y+number] = "x";
+                    arr[x-1][y+i] = "x";
+                    arr[x-1][y-1] = "x";
+                    arr[x-1][y+number] = "x";
+                    }
+
+                  else {
+                    arr[x+i][y] = 1;
+                    arr[x+i][y+1]="x";
+                    arr[x+i][y-1]="x";
+                    arr[x+number][y] = "x";
+                    arr[x+number][y-1] = "x";
+                    arr[x+number][y+1] = "x"
+                    arr[x-1][y] = "x";
+                    arr[x-1][y-1] = "x";
+                    arr[x-1][y+1] = "x"
+                    }
+                  }
+                  var HR = 0;
+                  for (var i = 0;i<10;i++) {
+                    for (var j = 0;j<10;j++) {
+                      if (arr[i][j]===1) {
+                        ++HR;
+                      }
+                    }
+                  }
+                  // console.log(TheNumber+" the TheNumber after loop")
+                  // console.log(HR+" the HR number after loop")
+
+                  if (HR!==(TheNumber)) {
+                    // console.log("Fuck")
+                    makeBattle();
+                  }
+
+
+                }
+                makeChips(4);
+                makeChips(3);
+                makeChips(3);
+                makeChips(2);
+                makeChips(2);
+                makeChips(2);
+                makeChips(1);
+                makeChips(1);
+                makeChips(1);
+                makeChips(1);
+
+
+
+
+              }
+
+
+      makeBattle();
+console.table(arr)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>butelfield</title>
+</head>
+<body>
+<!-- Морской бой -->
+ 	<!-- <script type="text/javascript">
+ 	var battelships= {
+ 		field: [],
+ 		hit: function() {},
+ 		_validate: function() {},
+ 		_showMessage: function() {},
+ 		_fill: function() {} // циклы для заполнения
+ 	}
+
+ 	{
+ 		ship: true / false,
+ 		opened: true / false,
+ 		placeble: true / false
+
+ 	}
+
+ 	var ships = {
+ 		1: {
+ 			length: 4,
+ 			dir: 1,
+ 			last: 2
+ 		}
+ 	}
+
+  	</script> -->
+  	<script type="text/javascript">
+  	// КОНСТРУКТОРЫ
+  	function Animal(name) { // функции-конструкторы с большой буквы
+  		// под капотом
+  		  // var this = {};
+		  // {
+		  //   name: 'ежик',
+		  //   canWalk: true
+		  // }
+  		this.name = name;
+  		this.canWalk = true;
+  			// return this;
+  	}
+
+  	var animal = new Animal("ежек");
+
+
+  	function Country(name,cPopulation,thisOwnName) {
+  		var ownName = thisOwnName;
+  		this.name = name;
+  		this.population = cPopulation;
+  		this.trade = function(anotherCountry) {
+  			console.log(this.name+" is traiding with "+anotherCountry.name)
+  			// console.log(this.name+" is traiding with "+anotherCountry) можно и так
+  		}
+  	}
+
+  	var ua = new Country ('Ukraine',40,"ML ");
+  	console.log(ua);
+  	var uv = new Country ('Uruhvai',10);
+  	console.log(uv);
+  	uv.trade(ua);
+  	// uv.trade(ua.name) ожно и так
+  	ua.name = 'Blabla'// Переопределять свойства при наличии функции-конструкторе нежелательно
+  	console.log(ua);
+
+
+
+
+
+
+
+
+  	var Calc = function() {
+  		this.read = function(x,y) {
+  			this.x = x;
+  			this.y = y;
+  			return this;
+  		}
+
+  		this.sum = function() {
+  			console.log(this.x+this.y)
+  		}
+
+  		this.mul = function() {
+  			console.log(this.x*this.y)
+  		}
+  	}
+
+  	var calc = new Calc();
+  	calc.read(10,20); // a= 10, b = 20;
+
+  	calc.sum(); //30
+  	calc.mul(); //200
+
+  	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+.styles {
+    color: red;
+    font-family: "Roboto", sans-serif;
+    list-style-type: circle;
+    list-style-type: square;
+    list-style-type: none; /*убирает точки совсем*/
+    list-style-type: decimal; /*нумерацияы*/
+    list-style-type: lower-roman;
+    list-style-type: lower-alpha;
+    list-style-type: upper-alpha;
+    list-style-type: upper-roman;
+    list-style-image: url(../images/vk.png);
+    list-style-position: outside;
+    list-style-position: inside;
+    list-style: circle url(../images/vk.png) outside;
+    padding: 5px;
+    border: 1px solid black;
+    
+}
+
+.styles:hover {
+    background-color: #f8af88;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "reapeat-angular",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "vitaldo1992 <vitaliy.duvalko@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

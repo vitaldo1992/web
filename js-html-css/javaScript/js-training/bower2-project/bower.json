@@ -1,0 +1,22 @@
+{
+  "name": "vit-aldo",
+  "authors": [
+    "VitaliyDuvalko <vitaliy.duvalko@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.8"
+  }
+}

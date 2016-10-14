@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+/*
+	var min=1,max=10;
+		// Создаем функцию создающую рандомное значение;
+		function random (min,max) {
+			var rand = min + Math.random() * (max + 1 - min);
+			rand = Math.floor(rand);
+			return rand;
+			}
+
+	var size = 5;
+	var array = [];
+
+	for (var i=0; i<size; i++) {
+		var arr = [];
+		for (var j=0;j<size;j++) {
+			arr.push(random(0,10));
+		}
+		array.push(arr);
+	}
+	console.table(array)
+
+	var reversed = [];
+
+	for (var y = array.length-1;y>=0; y--) {
+		var tmpArr = []; // оздаем чтобы не менять исходник
+			for (var z = array[y].length-1; z>=0; z--) {
+				tmpArr.push(array[y][z])
+			}
+			reversed.push(tmpArr)
+	}
+	console.table(reversed)
+
+		var 	top_ = array[0].slice(),
+		rigth = [],
+		// bottom = [array[array.length-1]].slice().reverse(), посмотреть меняет ли исходник
+		bottom_ = array[array.length-1].slice(),
+		left = [];
+		bottom_.reverse();
+	for (var s=1;s<arr.length-1;s++) {
+		// arry[i][0] - левая грань
+		// array[i][array[i].length-1]
+		left.unshift(array[s][0]);
+		rigth.push(array[s][array.length-1])
+	}
+
+	var perimeter = top_.concat(rigth,bottom_,left)
+
+	console.log("top ",top_);
+	console.log("rigth ",rigth);
+	console.log("bottom ", bottom_);
+	console.log("left ",left);
+	console.log("perimeter ",perimeter)
+
+	var diagon = [];
+	var diagon2 = [];
+	for (var t = 0; t<array.length;t++) {
+		diagon.push(array[t][t]);
+		diagon2.push(array[t][array.length-1-t]);
+		diagon2.push(array[t][t+1-array.length])
+		// доделать
+	}
+	console.log("diagon ", diagon);
+	console.log("diagon2 ", diagon2)*/
+
+// 							ФУНКЦИИ
+// DECLARATION
+
+	sayHello("Vitaldo");
+	// sayHi();// матюкнется
+	function sayHello (name) {
+		console.log("Hello, "+name);
+		return name
+	}
+	sayHello();
+	console.log("Name",name)
+	var hi = sayHello;
+	hi();
+// EXPRESSION
+	var sayHi = function() {
+		console.log("Hello");
+	}; //ТАКОЙ СТИЛЬ ТРЕТУЕТ ТОЧКИ С ЗАПЯТОЙ
+
+	var arr;
+	console.log("arr",arr);
+	arr = [2];
+	// НООВАЯ ФУНКЦИЯ
+	console.log("\nNEW FUNCTION")
+
+	function sum(a,b) {
+		// что происходит под капотом (неявно)
+		// var a = 2;
+		// var b = 3;
+		var result = a+b; // переменныя объявленная внутри функции остается внутри функции
+		return result; // Можно и так но лишне
+		// return a+b;
+
+	}
+
+	var res = (sum(2,3))
+	console.log(res)
+	console.log(result) // матюк
+
+
+
+	</script>
+</body>
+</html>

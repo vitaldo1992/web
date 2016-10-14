@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>let</title>
+</head>
+<body>
+  <script type="text/javascript">
+  // СПОСОБ 1 - ЧЕРЕЗ LET
+  // var GetArray = function() {
+  //   var arr = new Array(10);
+  //   for (let i = 0; i<10; i++) {
+  //     arr[i] = function() {
+  //       return alert(i)
+  //     }
+  //   }
+  //   return arr;
+  // }
+  // GetArray()[1]();
+  // GetArray()[6]();
+
+  // СПОСОБ 2 - ОБЕРНУТЬ ПРИСВОЕНИЕ В САМОВЫЗЫВАЮЩУЮСЯ ФУНКЦИЮ
+  // var GetArray = function() {
+  //   var arr = new Array(10);
+  //
+  //   for (var i = 0; i<10; i++) {
+  //     (function(i) {
+  //       arr[i] = function() {
+  //         return alert(i)
+  //       }
+  //     }(i))
+  //   }
+  //   return arr;
+  // }
+  // GetArray()[1]();
+  // GetArray()[6]();
+
+  // СПОСОБ 3 - ПРИСВОИТЬ НАЗВАНИЮ ФУНКЦИИ ЕЕ НОМЕР И ВЫВЕСТИ ЕГО
+  // var GetArray = function() {
+  //   var arr = new Array(10);
+  //   for (i = 0; i<10; i++) {
+  //
+  //     var shooter = function f() {
+  //       return alert(f.i)
+  //     };
+  //     shooter.i = i;
+  //     arr[i] = shooter;
+  //   };
+  //
+  //   return arr;
+  // }
+  // GetArray()[1]();
+  // GetArray()[6]();
+
+  // СПОСОБ 4 - ОБЕРНУТЬ ЦИКЛ В САМОВЫЗЫВАЮЩУЮСЯ ФУНКЦИЮ
+  // var GetArray = function() {
+  //   var arr = new Array(10);
+  //   for (var i = 0; i<10; i++)(function(i) {
+  //     arr[i] = function() {
+  //       return alert(i)
+  //     }
+  //   })(i);
+  //   return arr;
+  // }
+  // GetArray()[1]();
+  // GetArray()[6]();
+
+  // Возможность оборачивать цикл в функцию
+  // for (var i = 0;i<3;i++)(function(i) {
+  //   alert("fuck "+i)
+  // })(i)
+  var arr2=new Array(10)
+
+  function makeArr(i) {
+      if (0<=i&&i<=9) {
+      arr2[i] = [0,0,0,0,0,0,0,0,0,0] ;
+
+      makeArr(++i)
+    }
+    else {
+      return;
+    }
+  }
+  makeArr(0);
+  console.table(arr2);
+  </script>
+</body>
+</html>

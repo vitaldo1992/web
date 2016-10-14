@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*		function returnCountFn(argument) {
+		  var counter = 0;
+		  function countMe() {
+		    console.log(++counter);
+		    return counter;
+		  }
+		  return countMe;
+		}
+
+		var c = returnCountFn();
+
+		c();
+		c();
+		c();*/
+
+		// Задержка функций
+
+		/*function game() {
+			alert("Hello");
+		};
+			var idd = setTimeout(game,3000);
+			console.log(idd);
+
+			var idd2 = setTimeout(game,3000);
+			console.log(idd2);*/
+
+			function a() {
+				console.clear();
+				var date = new Date();
+				var dateStr = date.getHours()+' : ' +
+							date.getMinutes()+' : '+
+							date.getSeconds();
+				console.log(dateStr);
+
+				if (!date.getSeconds()) {
+					clearInterval(intervaID)
+				}
+			}
+			var intervaID = setInterval(a, 1000)
+
+			// можно так с анонимной функцией
+
+			/*var intervaID = setInterval(function () {
+				console.clear();
+				var date = new Date();
+				var dateStr = date.getHours()+' : ' +
+							date.getMinutes()+' : '+
+							date.getSeconds();
+				console.log(dateStr);
+
+				if (!date.getSeconds()) {
+					clearInterval(intervaID)
+				}
+			},1000);*/
+
+			// Маленький таск - отсчитывать 1 минуту ("бомба")
+
+			/* function timerDecrement () {
+			 	var i=5;
+			 		function BoomTimer() {
+
+			 			if (i>0) {
+			 					console.log(i)
+			 					return --i;
+			 				}
+
+			 			else {
+			 					console.log(i,"Boom!");
+			 					clearInterval(id);
+
+			 				}
+
+			 	}
+
+			 	var id = setInterval(BoomTimer, 1000);
+
+			 }
+			timerDecrement();*/
+
+			// function makeBomb(seconds) {
+			// 	var id = setInterval(function() {
+			// 		seconds--;
+			// 		if (!seconds) {// seconds === 0) {
+			// 				clearInterval(id);
+			// 				alert("BOOM");
+			// 			}
+			// 		console.log(seconds);
+			// 	},1000);
+			// }
+			//
+			// makeBomb(5);
+
+			// Задача для собеседования - спустя секунду должно вывести все i;
+		// 	function fathe(i) {
+		// 	for (var i = 0;i<10;i++) {
+		// 		function x(index) {
+		// 			setTimeout(function() {
+		// 				console.log(index);
+		// 		},1000);
+		//
+		// 		x(i)
+		// }
+		// fathe();
+
+
+	</script>
+</body>
+</html>

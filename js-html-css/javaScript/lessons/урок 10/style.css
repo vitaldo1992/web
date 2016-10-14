@@ -1,0 +1,17 @@
+.seaWar table {
+	background-color: #7AD0FF;
+	align: center;
+	margin: auto;
+}
+
+td {
+	width:20px;
+	height: 20px;
+	border: 2px solid yellow;
+}
+
+td:hover {
+	background-color: blue;
+}
+
+

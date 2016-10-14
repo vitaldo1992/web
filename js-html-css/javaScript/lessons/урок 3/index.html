@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- <script src="./js/main.js" defer></script> -->
+</head>
+<body>
+  <!--  -->
+</body>
+</html>
+<script>
+
+
+/*var c = 2 * "2"; урок3
+console.log(typeof c)
+console.log(c);*/
+
+/*меньше равно
+больше равно*/
+
+var arr = [1,2,3];
+for (i=2;i>=0;i--) {
+  console.log(arr[i])
+}
+
+//можно и так - если одна строка и только иф
+
+/*a = 0;
+if (a === 0) var x = a;
+console.log(x)*/
+
+/*if (a>b) {
+	//1
+} else {
+	//2
+}
+// если 1 строка то можно так записывать.
+(a>b) ? alert("Ok") : alert("неОК");
+var user = (isAdmin(usr)) ? 'Админ' : "User";//убрать второе исполнение нельзя
+
+методы prompt/alert/confirm - асинхронные  и остановят код на время исполнения.*/
+
+//*=//
+
+/*var user = 9;
+console.log((user==9))*/
+
+/*var x = 123;
+var y = "123";
+console.log(x==y)//вернет тру
+console.log(x===y)//вернет фолс*/
+
+
+
+/*полезная штука получить последний элемент массива в котором мы не знаем количество массивов
+console.log(arr[arr.length-1])
+*/
+
+// arr[arr.length] = 800;
+
+/*arr = [];
+arr[1000] = 900;
+console.log(arr.length)
+arr.push(900);*/
+
+// удление эл.массива
+
+/*var ar = [1,2];
+var d = ar.pop();
+console.log(ar);
+ar.unshift(12234);//вставляет эл. с левой стороны
+console.log(ar);
+ar.reverse();
+console.log(ar);// меняет порядком эл.*/
+
+var arr = [1,2,3,4,5];
+/*var z = arr.join('_');
+console.log(z)
+
+var ar = "gero";
+console.log(ar.split(''));
+
+var ar2 = "1,2,3,4,5";
+console.log(ar2.split(',',3));*///почему так все выводится
+console.log(arr);
+var arr1 = [1,2,3,4,5];
+console.log("slice(3) = "+arr1.slice(3))
+console.log("arr1.slice(-2) = "+arr1.slice(-2))
+console.log("arr1.slice() = "+arr1.slice())
+console.log("slice(1,3) = "+arr1.slice(1,3))
+console.log("splice(1,3) удаляем 3 штуки с середины = "+arr1.splice(1,3))
+console.log("splice(1,3) удаляем 3 штуки с середины = "+arr1.splice(1))
+
+
+/*var arr1 = [1,2,3,4,5,6,7,8,9];
+console.log("splice(1,3) удаляем 3 штуки с середины = "+arr1.splice(2,3,"Vitaliy","Igor",235,445))
+var ger = arr1.splice(2,3,"Vitaliy","Igot"))//проверь. сортировка читать дома
+console.log("Ger = "+ger)*/
+
+/*delete arr[2];
+console.log(arr[1],arr[2],arr[3])
+
+arr4 = [1,2,3];
+arr5 = [4,5,6];
+console.log(arr4.concat(arr5))
+
+var arr7 = [1,2,3,4,5,6,7,8,7,9];
+b = arr7.indexOf(7);// ищет слева направо
+console.log(b)
+console.log(arr7.lastIndexOf(7))//ищет слева направо
+
+var a = 3;
+var b = a;
+a = 100;
+console.log(a,b)
+
+var t  = {
+	name:"Vitaldo"
+};
+var h = t;//присваивание по ссылке - посмотреть
+console.log(h.name)
+var j = t;
+t = "Gamma"
+console.log(t, h.name)
+
+var yot = [1,2,3,4,5];
+var got = yot.slice();
+var zetta = yot;
+console.log(got);//смысл копирования и присваивания
+yot = 1;
+console.log(got,yot,zetta)
+
+var lock = {name:"V"};
+var dock = {name:"V"};
+console.log(lock == dock);*/
+
+/*x = {
+	name: "Vitaldo";
+}
+delete.*/
+
+// ===  - сравнение без приведения к одному типу. урок3
+/*'2'>1 - прокатит
+'01' == 1 прокатит урок 3*/
+
+/*a = b = c = v = 2+2*/ //считает справа на лево;// урок 3
+// var a;
+// debugger;
+
+
+// a = 100;
+
+// // message, a, b, c, d;
+// var message = 'hello';
+
+// message = 'world';
+// console.log(message);
+
+// var a = 123;
+
+// var b, c = 134234;
+
+// var d;
+
+
+
+
+/*var user = {
+   '123name':    "Vasya",
+   'surname': 'Pupkin',
+   'age':     25,
+   'student': true
+};*/
+
+// user.name;
+
+// user.surname
+
+// user.age
+
+// user.student
+
+
+//a && b && c
+//c && a && b
+
+
+</script>

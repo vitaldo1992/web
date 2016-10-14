@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Функции</title>
+</head>
+<body>
+	<script>
+		function random(min, max) {
+			var rand = min + Math.random() * (max + 1 - min);
+			rand = Math.floor(rand);
+			return rand;
+		}
+
+	function createArray(size, min, max) {
+		var arr = [];
+		for (var i = 0; i < size; i++) {
+			arr[i] = [];
+		for (var j = 0; j < size; j++) {
+			arr[i][j] = random(min, max);
+			}
+		}
+		console.log("\nСозданный массив")
+		return arr;
+	}
+	Vitaldo = createArray(5, 1, 10);
+	console.table(Vitaldo);
+
+	var firstLineArray = Vitaldo[0].slice();
+
+	var topLineArray = Vitaldo[0].slice(0,Vitaldo.length-1);
+	topLineArray = topLineArray.reverse();
+
+	var rightSideArray = [];
+	var leftSideArray = [];
+	var diagonArray1 = [];
+	var diagonArray2 = [];
+
+	for (i=0,j=Vitaldo.length-1;i<Vitaldo.length;i++) {
+
+		rightSideArray.push(Vitaldo[i][j]);
+		leftSideArray.push(Vitaldo[i][0]);
+		diagonArray1.push(Vitaldo[j-i][j-i]);
+		diagonArray2.push(Vitaldo[j-i][i]);
+
+
+	}
+
+	console.log(firstLineArray.concat(rightSideArray,diagonArray1));
+	console.log(leftSideArray.concat(diagonArray2,topLineArray));
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vitaldo">
+<head>
+	<meta charset="UTF-8">
+	<title>Bower-project</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id="divudiv" ng-controller="DurakController as controller">
+		<div>привет дурак</div>
+		<table>
+			<tr ng-repeat="x in controller.phones.phones">
+				<td>{{ x.model }}</td>
+				<td>{{ x.price }}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html> 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+// 		var user = {
+// 			name: 'Ivan',
+// 			surmane: 'Inanoff',
+// 			age: 50,
+// 			children: [
+// 				{
+// 					name: 'Petr',
+// 					surmane: 'Inanoff',
+// 					age: 10
+// 				},
+// 				{
+// 					name: 'Masha',
+// 					surmane: 'Petroff',
+// 					age: 25,
+// 					children: [
+// 						{
+// 						name: 'Misha',
+// 						surmane: 'Petroff',
+// 						age: 3
+// 						}
+// 					]
+// 				},
+// 			]
+// 		};
+
+
+
+
+// var results = [];
+
+// function getNamesRecursive (user) {
+// 	// debugger;
+// 	for (var key in user) {
+// 		if (key === "name") {
+// 			results.push(user[key]);
+// 		}
+// 		/*else if (typeof user[key] == 'object' && user[key].length);*/
+// 		else if (typeof user[key]=='object') {
+// 			getNamesRecursive(user[key]);
+// 		}
+// 	}
+// }
+
+// getNamesRecursive(user);
+// console.log(results);
+
+
+var rerurnInn = function(x) {
+	if (x <= 1 && x>0) {
+		return x;
+	}
+	else if (x>1) {
+		var Get = x*rerurnInn(x-1);
+		return Get;
+	}
+	else {
+		return "Fuck you";
+	}
+
+}
+
+// Измирение производительности
+
+/*var date = +(new Date());
+console.log(rerurnInn(55));
+var newDate = +(new Date());
+console.log(newDate-date)*/
+
+console.time('blabla');
+var res = rerurnInn(10);
+console.timeEnd('blabla')
+console.log(res)
+// Измирение цикла
+var num = 10;
+for (var i = 0; i<10; i++) {
+	num*=(num-1);
+}
+console.log(num)// доделать
+	</script>
+
+
+</body>
+</html>
+

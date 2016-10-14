@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<script>
+	var arr2=[];
+	var arr3=[];
+	var arr4 = [];
+	var arr5 = [];
+	var j,i;
+			var arr = [
+			[1, 2, 3, 4, 5,6,150],
+			[100, 200, 300, 400, 500, 8,99],
+			['яблоко', 'груша', 'черешня', 'дыня', 'слива',"fuck","tudor"],
+			[11, 22, 33, 44, 55, 77,88],
+			[50, 150, 250, 350, 450, 550,670],
+			[50, 150, 250, 350, 450, 550,670],
+			[50, 150, 250, 350, 450, 550,670],
+		];
+		console.table(arr);
+		for (i = 0;i<arr.length;i++) {
+			if (i>0&&i<arr.length-1) {
+				arr2.push((arr[i].slice(arr.length-1)).toString())
+				arr3.push((arr[i].splice(0,1)).toString())
+				}
+
+			else if (i==0) {
+					arr4 = arr[i]
+				}
+			else if (i==arr.length-1) {
+					arr5=arr[i].reverse()
+			}
+			// ((arr4.concat(arr2)).concat(arr5)).concat(arr3)
+		}
+
+
+
+
+
+		console.log(arr2);
+		console.log(arr3);
+		console.log(arr4);
+		console.log(arr5);
+		console.log(((arr4.concat(arr2)).concat(arr5)).concat(arr3.reverse()))
+
+
+
+
+
+	</script>
+</body>
+</html>

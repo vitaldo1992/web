@@ -1,0 +1,64 @@
+* {
+  background-color: blue;
+}
+
+#makeCofeemachine {
+  width:40px;
+  height:20px;
+  background-color: gray;
+}
+
+#runCofeemachine {
+  width:40px;
+  height:20px;
+  background-color: green;
+}
+
+#stopCofeemachine {
+  width:40px;
+  height:20px;
+  background-color: red;
+}
+
+
+else {
+  if (arr[x][y+2]==checkChip&&arr[x][y+3]==checkChip&&arr[x][y+4]==checkChip) {
+    makeCroodsChip();
+  };
+  if (arr[x][y+2]==checkField&&arr[x][y+3]==checkField&&arr[x][y+4]==checkField) {
+    makeCroodsChip();
+  };
+  if (arr[x+1]) {
+    if (arr[x+1][y+2]==checkChip&&arr[x+1][y+3]==checkChip&&arr[x+1][y+4]==checkChip) {
+      makeCroodsChip();
+    };
+  }
+  if (arr[x-1]) {
+    if (arr[x-1][y+2]==checkChip&&arr[x-1][y+3]==checkChip&&arr[x-1][y+4]==checkChip) {
+      makeCroodsChip();
+    };
+  };
+
+  make4chipGorizontal();
+};
+function make4chipVertical() {
+for (var i = 0; i<4; i++) {
+arr[x+i][y]=1;
+console.log(x+i);
+arr[x+i][y-1]="xx";
+console.log(x+i);
+arr[x+i][y+1]="xx";
+console.log(x+i);
+};
+if (arr[x+4]) {
+arr[x+4][y-1]="xx";
+arr[x+4][y]="xx";
+arr[x+4][y+1]="xx";
+};
+if (arr[x-1]) {
+arr[x-1][y-1]="xx";
+arr[x-1][y]="xx";
+arr[x-1][y+1]="xx";
+}
+console.table(arr)
+};

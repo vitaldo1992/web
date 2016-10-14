@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="clock">
+<head>
+	<meta charset="UTF-8">
+	<title>Clocks</title>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app/clock.ctrl.js"></script>
+</head>
+<body>
+	<div id="clock" ng-controller="clock">
+		<div>{{hours}}.{{minutes}}.{{seconds}}</div>
+		<div>{{time | date:'HH:mm:ss'}}</div>
+	</div>
+
+
+</body>
+</html>

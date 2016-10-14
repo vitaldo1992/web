@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	main html заходит в индекс.html с помощью тега <div ng-view></div>
+	ng-view работает только с одним окном
+	импользование вложенных view или нескольких view позволяет библиотека UI-wiew
+	ДЗ подключить UI и NG-view
+	UI - меняет контент при изминении контента без измининия URL
+
+	если из "site.com.ua" на "site.com.ua/products" - если перейти на products с домена - нормально потому что нет запроса на сервер
+	 если переслать другу "site.com.ua/products" - ссылка будет 404 потому что такой запрос на сервр недействителен.
+	 необходима настройка бэкэнда.
+
+	 смотри файл product-api.service.js тут АПИ
+	</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// (function x() {
+	// 	var y = 10;
+	// 	console.log(y);
+	// 	var y = function () {};
+	// 	console.log(y);
+	// })() // Разобрать
+
+	/*1) Этап инициализации
+      - создаются переменные, объявленные
+        через var (они равны при этом undefined)
+      - создаются функции-объявления (function declaration)
+        они равны при этом функциям =)
+	2) Этап выполнения скрипта
+      - построчно выполняем код
+      - переменным (var a = 10;) присваиваются значения
+        (было undefined, стало 10)
+      - функции-объявления (function declaration)
+        игнорируются (сами их объявления)*/
+
+        // Оюъекты
+
+        /*var auth = {
+        	loggefUserId: 3,
+        	serviceMsg: function(id) {
+        		if (isLogged) {
+        			console.log('Hello, '+users[id].name)
+        		}
+        		else {
+        			console.log('User with id = '+id+' was loged out')
+        		}
+        	}
+        	logOuth: function() {
+        		auth.loggedUserId = null;
+        		auth.servicesMsg(autj.loggedUserId);
+        	},
+        	logIn: function(id) {
+        		auth.loggedUserId = id;
+        		auth.servicesMsg(autj.loggedUserId);
+        	}
+
+        };*/
+			/*var user = {
+			  name: 'Василий',
+
+			  sayHi: function() {
+			    debugger;
+			    alert( this.name );
+			  }
+			};
+
+			var vasya = user;
+			user = null;
+			vasya.sayHi();*/
+
+			// console.log(this)
+
+
+			// var x = 2;
+			// var z = [x];
+			// z[0]=3;
+			// console.log(x);
+
+
+
+			// function game() { РАЗОБРАТЬСЯ !!!!!
+			// 	// console.log(this.name = "serg");
+			// 	this.gabe = function(){
+			// 		console.log(this)
+			// 	}
+			// }
+			// game().gabe();
+
+			/*(function() {
+				"use strict";
+				var obj = {
+					context: this,
+					get: function() {
+						return this;
+				}
+			};
+			console.log(obj.context);
+			console.log(obj.get());
+		})();*/
+// this только если внутри метода выводит родительский объект
+
+// var a = [1,"34",{}];
+// console.log(Object.keys(a));
+// var x = 0;
+
+
+// console.log(x = x+1);
+// console.log(x);
+
+/*	obj = {
+		name: "Vitaliy",
+		do: function() {
+			console.log(this.name)
+		},
+		doFuckName: function() {
+			mix(this)
+		}
+	}
+	function mix(x) {
+		console.log("Fuck you "+x.name)
+	}
+
+	obj.doFuckName()*/
+
+/*	var betta = [1,"vova"];
+	betta.key = "dober"
+	// console.log(betta["key"])
+	// console.log(betta[0]);
+	var kei;
+	for (kei=0; kei<betta.length; kei++) {
+		console.log(kei)
+	}*/
+
+	//dz
+
+	/*var firstNumb = prompt();
+	var secondNumb = prompt();
+	var calculator = {};
+	calculator.read = function (firstNumb,secondNumb) {
+		this.firstNumb = Number(firstNumb);
+		this.secondNumb = Number(secondNumb);
+	};
+	calculator.multiply = function() {
+		alert(this.firstNumb*this.secondNumb)
+	};
+
+
+	calculator.summ = function() {
+		alert(this.firstNumb+this.secondNumb)
+	};
+
+	calculator.read(firstNumb,secondNumb);
+	calculator.summ();
+	calculator.multiply();*/
+
+
+// Морской бой.
+
+	/*var arr = new Array(10);
+	for (var makeArray = 0; makeArray<10; makeArray++) {
+		arr[makeArray] = new Array(10);
+	}
+		for (var i = 0; i<arr.length; i++) {
+			for (var makeObj = 0; makeObj<arr[i].length; makeObj++) {
+				arr[i][makeObj] = {
+				   chip: false,
+				   opened: false
+				}
+			}
+		}
+	console.log(arr);
+	function shoot (x,y) {
+		(function validate(x,y) {
+			if (x<10 && x>=0 && y<10 && y>=0) {
+				console.log("'x'"+" and "+"'y'"+" are exist")
+
+				arr[x][y].opened = true;
+
+			}
+			else {
+				console.log("'x'"+" or "+"'y'"+" are not exist")
+			}
+		}(x,y))
+	}
+	shoot(1,3)
+	console.log(arr)*/
+	// console.log(arr)
+
+	/*var obj = {
+		name:"Galas",
+		showName: function(){
+			console.log(this.name)
+		},
+		showName3: (function(){console.log(this.name)})()
+	}
+	obj.showName()
+	obj.showName2 = function() {
+		console.log(this.name)
+	}
+	obj.showName2();
+	if (obj.name == "Galas") {
+		obj.showName()
+	};
+	var bee = obj.showName();
+	(bee = obj.showName)()*/
+
+/*	var obj = {};
+	obj.name="ser";
+	obj.func = function() {
+		console.log(obj.name)
+	}
+	// console.log(obj.name && obj.game)
+	(obj.name == "ser" ? obj.func : obj.sunk)()*/
+
+	/*var arr = [];
+	function returnDegree(x) {
+		arr.unshift(x);
+		if (x == 0) {
+			return x;
+		}
+		else {
+			return x = x+(returnDegree(x-1))
+		}
+	}
+	console.log(returnDegree(3))
+	console.log(arr)*/
+
+	/*var gabe = {
+		name : "Gabby",
+		second_Name: "flaffy"
+	}
+	var dildo=Object.create(gabe);
+	console.log(dildo.name);
+	dildo.name="Sarra";
+	console.log(dildo.name);
+	console.log(gabe.name);*/
+	</script>
+</body>
+</html>

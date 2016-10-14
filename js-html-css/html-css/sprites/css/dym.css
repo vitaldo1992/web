@@ -1,0 +1,132 @@
+* {
+	margin:0;
+	padding:0;
+}
+/*.icon {
+	display: inline-block;
+	height:40px;
+	width:40px;
+	background-image:url(../images/sprite.png);
+}
+
+.icon.icon-car {
+	background-position: 0 0
+}
+
+.icon.icon-car:hover {
+	background-position: 0 -40px
+}
+
+.icon.icon-check {
+	background-position: -40px 0 
+}
+
+.icon.icon-check:hover {
+	background-position: -40px -40px
+}
+
+.icon.icon-card {
+	background-position: -80px 0
+}
+
+.icon.icon-card:hover {
+	background-position: -80px 40px
+}
+
+.icon.icon-comments {
+	background-position: -120px 0
+}
+
+.icon.icon-comments:hover {
+	background-position: -120px 40px
+}
+*/
+
+.api {
+	display: block;
+	position:relative;
+	top:60px;
+	height:55px;
+	width:60px;
+	background-image:url(../images/double-image.png);
+}
+
+.api.api-first {
+	background-position: 0 -60px
+}
+
+.api.api-first:hover {
+	background-position: 0 -860px
+}
+
+.api.api-two {
+	height:15px;
+	width:60px;
+	background-position: 0 -115px
+}
+
+.api.api-two:hover {
+	background-position: 0 -915px
+}
+
+
+/*.api.api-three {
+  position: relative;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  height: 60px;
+  width: 60px;
+}
+
+.api.api-three:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 51%;
+  background: red;
+  -webkit-transform: skew(36deg, 30deg);
+  -moz-transform: skew(36deg, 30deg);
+  -ms-transform: skew(36deg, 30deg);
+  -o-transform: skew(36deg, 30deg);
+  transform: skew(36deg, 30deg);
+}
+.api.api-three:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80%;
+  width: 40%;
+  background: red;
+  -webkit-transform: skew(60deg, 36deg);
+  -moz-transform: skew(60deg, 36deg);
+  -ms-transform: skew(60deg, 36deg);
+  -o-transform: skew(60deg, 36deg);
+  transform: skew(60deg, 36deg);
+}​*/
+
+#mg-div {
+	background-image:url(../images/красный.png);
+	position:absolute;
+	/*left:-800px;*/
+	top:300px;
+}
+
+/*#mg {
+	background-image:url(../images/красный.png);
+}*/
+
+#mg:hover {
+	z-index: 0;
+	opacity: 0; 
+}
+
+#area1:hover {
+	display:none;
+	background-image:url(../images/красный.png);
+	
+}
+

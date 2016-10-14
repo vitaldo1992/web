@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Функции</title>
+</head>
+<body>
+	<script>
+	/*var func = function(callback) {
+		var name = "Vitaldo";
+		callback(name);
+	};
+	//
+	func(function(n) {
+		console.log("Hello "+n);
+	});*/
+
+	/*var y = function(slayer) {
+		// console.log("Hey");
+		// slayer(name);
+		console.log(slayer());
+	};
+
+	y(function() {
+		return "Vitaldo";
+	});*/
+
+/*	var s=0;
+	var y = function(n) {
+		s=2;
+		console.log(s)
+		return n(s);
+	};
+	y(function(x) {
+		console.log("Vitaldo "+x);
+		s=1;
+		console.log(s)
+	});*/
+	var g = 0;
+	var teta;
+	var z=1;
+	var y = function(x) {
+		g = g+z;
+		z = z/x;
+		console.log("g",g);
+		console.log("z",z);
+
+		teta = function(u) {
+			g = g+z;
+			z = z*u;
+
+			console.log("g",g);
+			console.log("z",z);
+
+			return z;
+		}
+		return teta;
+
+
+	}
+
+	console.log(teta(2))
+
+	</script>
+</body>
+</html>

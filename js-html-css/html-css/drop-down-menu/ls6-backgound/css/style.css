@@ -1,0 +1,13 @@
+body {
+    height: 3000px;
+    background-color: #333333;
+    background-image:url(../images/18.jpg);
+    background-repeat: repeat-x;
+    background-repeat: no-repeat;
+/*    background-attachment: fixed;*/
+    background-attachment: fixed;
+    background-position: left bottom;
+    background-position: 0 0;
+/*    а можно одной записью */
+    background: red url(../images/15.jpg) repeat-x scroll top left;
+}

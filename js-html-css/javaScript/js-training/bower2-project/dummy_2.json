@@ -1,0 +1,24 @@
+{
+  "phones": [
+    {
+      "model":"Apple",
+      "price":"20grn"
+    },
+    {
+      "model":"mizue",
+      "price":"30grn"
+    },
+     {
+      "model":"nokia",
+      "price":"40grn"
+    },
+     {
+      "model":"motorolla",
+      "price":"15grn"
+    },
+     {
+      "model":"lenovo",
+      "price":"45grn"
+    }
+  ]
+}

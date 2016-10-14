@@ -1,0 +1,5 @@
+myApp.service('FooterService', function(){
+
+
+
+})

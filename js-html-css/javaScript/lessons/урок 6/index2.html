@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*var arr = [10,25,30,20];
+
+	function find(ar,x) {
+		for (var i = 0; i<ar.length; i++) {
+
+			if (ar[i]==x) {
+				return i
+			}
+		}
+		return -1;
+	}
+	console.log(find(arr,20));
+*/ var min
+	function random (min,max) {
+			var rand = min + Math.random() * (max + 1 - min);
+			rand = Math.floor(rand);
+			return rand;
+			}
+
+	var arr = [];
+
+	function createRandomArray(size, min, max) {
+		var arr = [];
+		for (var i = 0;i<size;i++) {
+			arr.push(random(min,max));
+		}
+		return arr
+	}
+
+	var array = createRandomArray(50,1,100);
+	console.log(array)
+	// fuck!!!! - доделай
+	// за нами спиралька, доделать диагонали, поиск элемента в массиве.
+	</script>
+</body>
+</html>

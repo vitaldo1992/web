@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrap">
+    <div class="section1">
+      section one
+    </div>
+    <div class="section2">
+      ection two
+    </div>
+  </div>
+  <div id="wrapper">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!-- место для вашей рекламы (новых эл-тов) -->
+  </div>
+
+  <script>
+    var myElement = document.createElement('h1');
+    var herElement = document.createElement('div');
+    myElement.innerHTML = 'Бог';
+    myElement.innerHTML += ' не я';
+    herElement.innerText = '<h1>Привет</h1>' // h1 запишется как текст и браузер его не отличит
+    var newEl = document.createElement('div');
+    newEl.id = 'bla-bla-bla';
+    newEl.innerHTML = '<h1>Hello world</h1>';
+
+    document.body.appendChild(newEl);
+
+    var wrapper = document.getElementById('wrapper'); // вставка элемента в конце блока
+    wrapper.appendChild(newEl);//может только один раз. где последний раз помещен там и останется
+
+
+    // Создаем список
+    // Элементы может создавать только document
+    var ul = document.createElement('ul');
+    for (var i=0; i<10; i++) {
+      var li = document.createElement('li');
+      var li2 = document.createElement('li');
+      li.innerHTML = 'item_' + i;
+      li2.innerHTML = '<h3>'+i+'</h3>'
+      ul.appendChild(li);
+      ul.appendChild(li2);
+    };
+    document.body.appendChild(ul);
+
+
+  //противоположность appendChild - insertBefore - вставляет элемент вперед всех
+    var vitaldo = document.createElement = '<h1>Hello world</h1>';
+
+    var sectOne = document.querySelector('#wrap > .section1');
+    var sectTwo = document.querySelector('#wrap > .section2');
+    sectOne.appendChild(vitaldo)
+    // Розобраться
+    // ДЗ ТАБЛИЦА - 3 СПОСБА. appendChild И innerHTML И !appendChild ЗА 1 РАЗОМ (документ-фрагмент) - подобный способ находится в уроке стрижака в конце
+  </script>
+
+</body>
+</html>

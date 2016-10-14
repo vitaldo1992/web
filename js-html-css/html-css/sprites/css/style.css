@@ -1,0 +1,38 @@
+.icon {
+	display: inline-block;
+	height:40px;
+	width:40px;
+	background-image:url(../images/sprite.png);
+}
+
+.icon.icon-car {
+	background-position: 0 0
+}
+
+.icon.icon-car:hover {
+	background-position: 0 -40px
+}
+
+.icon.icon-check {
+	background-position: -40px 0 
+}
+
+.icon.icon-check:hover {
+	background-position: -40px -40px
+}
+
+.icon.icon-card {
+	background-position: -80px 0
+}
+
+.icon.icon-card:hover {
+	background-position: -80px 40px
+}
+
+.icon.icon-comments {
+	background-position: -120px 0
+}
+
+.icon.icon-comments:hover {
+	background-position: -120px 40px
+}

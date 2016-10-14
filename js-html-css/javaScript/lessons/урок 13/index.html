@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>this, call, apply, bind, декораторы и начало функционального ООП</title>
+   </head>
+<body>
+  <script>
+  //   var obj = {
+  //     name: 'admin'
+  //   };
+  //   var obj2 = {
+  //     name: 'guest'
+  //   };
+  //
+  //   function sayHello() {
+  //     console.log(this.name);
+  //   }
+  //
+  // sayHello.call(obj);
+  // sayHello.call(obj2);
+
+
+
+
+  var obj = {
+    name: 'admin'
+  };
+  var obj2 = {
+    name: 'guest'
+  };
+
+  // function sayHello() {
+  //   console.log(arguments);
+  //   console.log(arguments[0] + this.name);
+  //   console.log(this);
+  //   console.log('~~~~~~~~~~~~~~~~~~~~~~');
+  // }
+  //
+  //
+  // sayHello.call(obj, 'Привет, ');
+  //
+  // sayHello(obj, 'Привет, '); // wrong
+  //
+  // sayHello.call(obj2, 'Hello, ');
+
+  function sayGoodbye() {
+    console.log('Bye-bye, ' + this.name);
+  }
+
+  var goodbye = sayGoodbye.bind(obj);
+  console.log(goodbye == sayGoodbye);
+
+  goodbye();
+
+// ДЕКОРАТОР
+function mySuperFn() {
+   console.log('Hello, world');
+}
+
+var decorator = function(f, message) {
+   return function() {
+      f();
+      console.log(message);
+   }
+}
+
+mySuperFn = decorator(mySuperFn, 'I hate JS');
+mySuperFn()
+
+  </script>
+  <div>
+    <!-- Дз - кнопка остановки кофемашины -->
+    <script type="text/javascript">
+          function CoffeeMachine(power) {
+            this.waterAmount = 20;
+
+            var WATER_HEAT_CAPACITY = 4200;
+
+            var self = this;
+
+            function getBoilTime() {
+              return self.waterAmount * WATER_HEAT_CAPACITY * 80 / power;
+            }
+
+            function onReady() {
+              alert( 'Кофе готово!' );
+            }
+
+            this.run = function() {
+              setTimeout(onReady, getBoilTime());
+            };
+
+            // this.stop = function() {
+            //   console.log(self)
+            // }
+
+          }
+          myCoffeeMach = new CoffeeMachine(1000);
+          myCoffeeMach.run();
+    </script>
+  </div>
+</body>
+</html>

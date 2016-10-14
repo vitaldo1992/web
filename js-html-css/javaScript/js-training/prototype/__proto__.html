@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>__proto__</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var ua = {};
+  ua.independent = false;
+  ua.population = 35;
+  ua.region = {
+    name: "Kharkov",
+    population: 1.5
+  };
+  var ru = {
+    territory: 1.9
+  };
+  var usa = {
+    planet: "Earth"
+  }
+  ua.region.__proto__ = ru;
+  ru.__proto__ = usa;
+
+  // console.log(ua.region.independent);
+  var arr = [];
+  function findProp(obj) {
+    for (var key in obj) {
+      if (typeof obj[key]=="object") {
+        findProp(obj[key])
+      }
+      else {
+        // if (obj.hasOwnProperty(key)) {
+        arr.push(key+" : "+obj[key]);
+        // }
+      }
+    }
+  }
+  findProp(ua);
+  console.log(arr);
+  console.log(typeof ua.region=="object");
+
+
+  var head = {
+    glasses: 1
+  };
+
+  var table = {
+    pen: 3
+  };
+
+  var bed = {
+    sheet: 1,
+    pillow: 2
+  };
+
+  var pockets = {
+    money: 2000
+  };
+
+  var arr2=[pockets,bed,table,head];
+  for (var i=0;i<4;i++) {
+      arr2[i].__proto__=arr2[i+1]
+  };
+  console.log(pockets.glasses, head.money);
+
+  var CheckFunctionConstructor = function(x) {
+    this.x=x;
+    this.func = function() {
+      console.log(x);
+    }
+  }
+  var My = new CheckFunctionConstructor(4);
+  console.log(My.func.prototype);
+  console.log("1"[0]);
+  console.log(true+false)
+
+
+
+  </script>
+</body>
+</html>

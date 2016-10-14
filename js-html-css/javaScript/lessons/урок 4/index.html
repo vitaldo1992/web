@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var a = 123;
+		// var b = String(a);
+		// console.log(typeof a, typeof b);
+		// var c = a;
+		// c.toString();
+		// console.log(typeof c) почему намбер
+		// 123.toString()// нельзя
+		// f = "123"
+		// console.log(1-"1");
+		// // console.log(f += ) что это
+		// var t = "   74  ";
+		// t_ = Number(t);
+		// console.log(t_);
+
+		// var str = '';пустая строка
+		// var g =+str;
+		// console.log(g)
+
+		// var k = "12px12";
+		// console.log(parseInt(k))
+
+		// var d = "12.333ui";
+		// console.log(parseInt(k))
+
+		// var vb = "12.999999999ui";
+		// console.log(parseFloat(vb));
+
+		// разобратся Mass
+
+		// console.log("round "+Math.round(12.49));
+		// console.log("round "+Math.round(12.50001));
+
+		// console.log("floor "+Math.floor(12.49));
+		// console.log("floor "+Math.floor(12.50001));
+
+		// console.log("ceil "+Math.ceil(12.49));
+		// console.log("ceil "+Math.ceil(12.50001));
+
+		// console.log(1+null*100);
+
+		// console.log(null==0);
+		// console.log(null===0);
+
+		// console.log(undefined == 0);
+		// console.log(undefined === 0);
+
+		// console.log(undefined == null);
+
+		// console.log(""+1+0);
+		// console.log((" "));
+		// console.log((""));
+
+		// приваиние справа на лево
+		// var terro = 3 + 2;
+		// console.log(5 || 0)
+		// console.log(5 && 0)
+		// console.log(null+"ther")
+		// console.log(null-"ther")
+		// console.log(null+22)
+		// console.log(null-22)
+
+					// Циклы
+		// var counter = 0;
+		// while (counter<10) {
+		// 	console.log("Заплати")
+		// 	counter++;
+		// }
+		// console.log(counter)
+
+		// while (true) {} //вечный цикл
+
+		// var x = 0;
+		// do {
+		// 	console.log("Плати");
+		// 	x++
+		// } while (x<0); // сделает 1 раз потому что сначала делает а потом думает
+
+		// var counter = 0;
+		// while (counter<0) {
+		// 	console.log("Заплати")
+		// 	counter++; // не сделает и 1 раза потому что сначала думает а потом делает
+		// }
+
+		// for (;;) {
+		// 	// Вечный циклы фор
+		// }
+
+		// "use strict";
+		// for (var a=0;a<10;a++) {
+		// 	console.log("hey")
+		// 	var x = 14+a;
+		// }
+		// console.log(a);
+		// console.log(x);
+
+		/*var a = 0; //можно так
+		for (; a<10; a++) { // и так
+			console.log("hey")
+		}*/
+
+		/*var obj = {
+			name: "Admin",
+			id: 1,
+			role: "admin"
+		}
+
+		for (var key in obj) {
+			console.log(obj[key]+"\nиндекс = "+key);
+			console.log("по переменной будет "+obj["name"])
+		}*/
+
+		// var obj = {
+		// 	name: "Admin",
+		// 	id: 1,
+		// 	role: "admin",
+		// 	g: 12,
+		// 	f: 34,
+		// 	hg: 33
+		// }
+
+		// for (var key in obj) {
+		// 	console.log(obj[key]+"\nиндекс = "+key);
+		// 	console.log("по переменной будет "+obj["name"])
+		// 	if (key >2) {
+		// 		console.log("все")
+		// 		break; //не работает - проверить
+		// 	}
+		// }
+
+		// for (var key in obj) {
+		// 	console.log(obj[key]+"\nиндекс = "+key);
+		// 	console.log("по переменной будет "+obj["name"])
+		// 	if (key >2) {
+		// 		console.log("все")
+		// 		continue; //не работает - проверить
+		// 	}
+		//   console.log("fuck")
+		// }
+
+		// вложенные циклы
+
+		// blala:
+		// for (var c = 0; c < 5; c++) {
+		// 	for (var i = 0; i < 2; i++) {
+		// 		console.log("Hello 'c' = "+c+" 'i' = "+i);
+		// 		if (c >= 1) {
+		// 			break blala;
+		// 		}
+		// 	}
+		// }
+
+		/*for (var c = 0; c < 5; c++) {
+			for (var i = 0; i < 2; i++) {
+				console.log("Hello 'c' = "+c+" 'i' = "+i);
+				if (c >= 1) {
+					break ;
+				}
+			}
+		}
+
+		for (var c = 0; c < 5; c++) {
+			for (var i = 0; i < 2; i++) {
+				if (c >= 1) {
+					break ;
+				}
+				console.log("Hello 'c' = "+c+" 'i' = "+i);
+				}
+			}
+		}*/
+
+		// проверит switch с числами и строгим и не строгим приведением
+
+		var array = ['яблоко', 'груша', 'банан', 'айфон']
+		for (var i = 0; i<array.length; i++) {
+			console.log(array[i])
+			console.log(i)
+		}
+		// дз - еще проюзать индекс оф и почитать про него
+	</script>
+</body>
+</html>

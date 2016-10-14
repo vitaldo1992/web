@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>урок 16 свойства у функций prototype,</title>
+</head>
+<body>
+  <p>Статические методы функции-конструктора</p>
+  <p>Только у функций есть свойство prototype  </p>
+  <p>бежать  / 3 лошади. Добавить ко всем оьщий пробег. 1 лошадь проб 100 км.</p>
+
+  <script type="text/javascript">
+  var Horse = function() {
+    this.mileage = 0;
+    this.run = function(x) {
+      this.mileage+=x;
+      // или
+      // this.__proto__.Totalmileage+=x;
+
+      // или
+      this.constructor.prototype.Totalmileage +=x;
+    }
+
+  }
+
+  var g =  {
+    Totalmileage : 0
+    // если this.constructor.prototype.total +=x;
+    // то
+    // ????
+  }
+  Horse.prototype = g;
+
+  h1 = new Horse();
+  console.log(h1.mileage);
+  h1.run(50);
+  console.log(h1.mileage);
+  h2 = new Horse();
+  h2.Mileage;
+  console.log(h2.Totalmileage);
+  h3 = new Horse();
+  h3.run(20)
+  console.log(h3.Totalmileage);
+  console.log(h1.Totalmileage);
+  console.log(h1.Totalmileage);
+  console.log(h1.mileage);
+  console.log(h3.mileage);
+
+
+
+
+  </script>
+</body>
+</html>

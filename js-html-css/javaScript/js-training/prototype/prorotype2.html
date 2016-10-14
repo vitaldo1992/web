@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>prototype2</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function makeObj(name) {
+      this.name = name;
+      this.fullName = function() {
+        return this.name+this.constructor.prototype.lastName
+      }
+    };
+
+    makeObj.prototype = {
+      constructor : makeObj,
+      lastName : " Duvalko",
+      makeName : function() {
+        return this.name+this.constructor.prototype.lastName
+      }
+    };
+
+    var Me = new makeObj("Vitaliy");
+    console.log(Me.name+Me.constructor.prototype.lastName);
+    console.log(Me.fullName());
+    console.log(Me.lastName);
+    console.log(Me.makeName());
+
+
+  </script>
+</body>
+</html>

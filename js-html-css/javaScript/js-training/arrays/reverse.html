@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gard</title>
+</head>
+<body>
+	<script>
+			function random (min, max) {
+			var rand = min +Math.random() * (max + 1 - min);
+			rand =Math.floor(rand);
+			return rand;
+			}
+
+			var n = 3 ;var m = 3 ; var mas = [] ; var arr2 = [] ; var b=[] ;
+			for (i = 0; i < m; i++) {
+			mas[i] = [] ;
+			for (j = 0; j < n; j++)
+			{
+			mas [i] [j] = random(1,20);
+
+
+			}}
+			console.table(mas) ;
+			console.log(mas[0]);
+
+
+
+
+
+			var men = mas.length;
+			for (i=0; i<men;i++) {
+			mas[i].reverse();
+			// var len = mas.length - 1;
+			// for(j=0;j < len; j++) {
+			// mas[i].reverse();
+
+			}
+			console.log ('\nреверс массива равен ');
+			console.table(mas)
+			console.table(mas[0]);
+	</script>
+</body>
+</html>
